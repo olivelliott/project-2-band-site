@@ -1,0 +1,26 @@
+{
+  "name": "project-2-band-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/olivelliott/project-2-band-site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/olivelliott/project-2-band-site/issues"
+  },
+  "homepage": "https://github.com/olivelliott/project-2-band-site#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^16.0.1",
+    "express-session": "^1.17.3",
+    "handlebars": "^4.7.7",
+    "sequelize": "^6.21.3"
+  }
+}
