@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const withAuth = require("../../utils/auth");
 
+// * api/comments
+
 // GET all comments
 
 // GET a single comment
