@@ -1,0 +1,54 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {{!-- ! TITLE --}}
+        <title></title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
+        <link rel="stylesheet" href="/stylesheets/style.css" />
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <header>
+                <div>
+                    <h1>
+                    {{!-- ! TITLE --}}
+                    </h1>
+                </div>
+            <div class="nav">
+                <nav>
+                {{!-- ! NAVIGATION: forum, shows, login  --}}
+                {{!-- forum = href="/forum" --}}
+                {{!-- shows = href="/shows" --}}
+                {{!-- login = href="/login" --}}
+                </nav>
+            </div>
+            </header>
+
+            <section id="hero">
+                <div id="hero-section">
+                {{!-- ! HERO SECTION --}}
+                </div>
+            </section>
+
+            <main>
+                {{{body}}}
+            </main>
+
+            <footer>
+            </footer>
+        </div>
+
+        {{!-- {{#if loggedIn}}
+            <script src="/javascript/logout.js"></script>
+        {{/if}} --}}
+    </body>
+
+</html>
