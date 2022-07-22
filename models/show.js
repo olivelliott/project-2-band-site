@@ -19,12 +19,14 @@ Show.init(
             type: DataTypes.DATEONLY,
             allowNull: false
         },
+    },
+    {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user'
-    }
+        modelName: 'show'
+    },
 )
 
 // ! TEST
