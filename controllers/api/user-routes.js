@@ -4,7 +4,6 @@ const { User, Post, Comment, Show } = require('../../models')
 // * api/users
 
 // GET all users
-// ! exclude the password
 router.get('/', (req, res) => {
     User.findAll({
         attributes: { exclude: ['password'] }
@@ -93,7 +92,7 @@ router.put('/:id', (req, res) => {
 })
 
 // DELETE a user by its id
-router.delete('/', (req, res) => {
+router.delete('/:id', (req, res) => {
     User.destroy({
         where: {
             id: req.params.id
