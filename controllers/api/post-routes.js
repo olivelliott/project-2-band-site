@@ -65,7 +65,8 @@ router.get("/:id", (req, res) => {
 });
 
 // CREATE a new post
-router.post("/", withAuth, (req, res) => {
+// ! add withAuth once pathways are cleared
+router.post("/", (req, res) => {
     Post.create({
             title: req.body.title,
             user_id: req.session.user_id,

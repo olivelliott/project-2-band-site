@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
-const { Post, User, Comment } = require("../models");
+const { Post, User, Comment, Show } = require("../models");
 const withAuth = require("../utils/auth");
 
 // ! withAuth
@@ -8,8 +8,8 @@ const withAuth = require("../utils/auth");
 // * GET ALL FORUM POSTS : include : comment, user
 // RENDER it to the 'forum-home' handlebars page
 
-//I think this path is probably wrong
-router.get("/", withAuth, (req, res) => {
+//! add withAuth once pathways are cleared
+router.get("/",  (req, res) => {
     console.log(req.session);
     console.log("======================");
     Post.findAll({
@@ -75,5 +75,6 @@ router.get("/", withAuth, (req, res) => {
 //             res.status(500).json(err);
 //         });
 // });
+
 
 module.exports = router;
