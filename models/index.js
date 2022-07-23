@@ -2,6 +2,7 @@ const Post = require("./Post");
 const User = require("./User");
 const Comment = require("./Comment");
 const Show = require("./Show");
+const Newsletter = require("./Newsletter");
 
 User.hasMany(Post, {
     foreignKey: "user_id",
@@ -32,4 +33,4 @@ Post.hasMany(Comment, {
     onDelete: "SET NULL"
 });
 
-module.exports = { User, Post, Comment, Show };
+module.exports = { User, Post, Comment, Show, Newsletter };
