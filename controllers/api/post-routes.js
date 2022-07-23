@@ -7,7 +7,6 @@ const withAuth = require("../../utils/auth");
 
 // GET all posts
 router.get("/", (req, res) => {
-    console.log("======================");
     Post.findAll({
             attributes: ["id", "title", "user_id"],
             include: [{
@@ -66,8 +65,6 @@ router.get("/:id", (req, res) => {
 });
 
 // CREATE a new post
-// ! title, content, instagram, facebook, user id
-
 router.post("/", withAuth, (req, res) => {
     Post.create({
             title: req.body.title,

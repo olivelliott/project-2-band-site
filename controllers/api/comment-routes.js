@@ -5,7 +5,6 @@ const withAuth = require("../../utils/auth");
 // * api/comments
 
 // GET all comments
-
 router.get("/", (req, res) => {
     Comment.findAll()
         .then((dbCommentData) => res.json(dbCommentData))
@@ -16,10 +15,21 @@ router.get("/", (req, res) => {
 });
 
 // GET a single comment
+router.get('/:id', (req, res) => {
+    Comment.findOne({
+        where: {
+            id: req.params.id
+        }
+    })
+    .then(dbCommentData => res.json(dbCommentData))
+    .catch(err => {
+        console.log(err);
+        res.status(500).json(err);
+    })
+})
 
 // CREATE a new comment
 // ! text, user id, post id
-
 router.post("/", withAuth, (req, res) => {
     // expects => {comment_text: "This is the comment", user_id: 1, post_id: 2}
     Comment.create({
