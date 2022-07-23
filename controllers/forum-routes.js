@@ -42,39 +42,42 @@ router.get("/",  (req, res) => {
 // RENDER it to the 'single-post' handlebars page
 
 //I think this path is probably wrong
-// // TODO: router.get("/edit/:id", withAuth, (req, res) => {
-//     Post.findByPk(req.params.id, {
-//             attributes: ["id", "username", "title"],
-//             include: [{
-//                     model: Comment,
-//                     attributes: ["id", "comment_text", "post_id", "user_id"],
-//                     include: {
-//                         model: User,
-//                         attributes: ["username"],
-//                     },
-//                 },
-//                 {
-//                     model: User,
-//                     attributes: ["username"],
-//                 },
-//             ],
-//         })
-//         .then((dbPostData) => {
-//             if (dbPostData) {
-//                 const post = dbPostData.get({ plain: true });
+// TODO: 
+router.get("/edit/:id", withAuth, (req, res) => {
+    Post.findByPk(req.params.id, {
+        // Changed attribute from "username" to "user_id" > if you look in the 
+        // POST.js model, you will see that it's attribute it user_id that references which user it is
+            attributes: ["id", "user_id", "title"],
+            include: [{
+                    model: Comment,
+                    attributes: ["id", "comment_text", "post_id", "user_id"],
+                    include: {
+                        model: User,
+                        attributes: ["username"],
+                    },
+                },
+                {
+                    model: User,
+                    attributes: ["username"],
+                },
+            ],
+        })
+        .then((dbPostData) => {
+            if (dbPostData) {
+                const post = dbPostData.get({ plain: true });
 
-//                 res.render("single-post", {
-//                     post,
-//                     loggedIn: true,
-//                 });
-//             } else {
-//                 res.status(404).end();
-//             }
-//         })
-//         .catch((err) => {
-//             res.status(500).json(err);
-//         });
-// });
+                res.render("single-post", {
+                    post,
+                    loggedIn: true,
+                });
+            } else {
+                res.status(404).end();
+            }
+        })
+        .catch((err) => {
+            res.status(500).json(err);
+        });
+});
 
 
 module.exports = router;
