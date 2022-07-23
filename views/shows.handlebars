@@ -1,1 +1,14 @@
 <h1>upcoming shows</h1>
+
+<div class="wrapper row align-items-center">
+    {{#each show as |show|}}
+        <div class="card col-sm-6 col-lg-3">
+            <div class="card-title">
+                <h1>{{venue}}</h1>
+            </div>
+            <div class="card-content">
+                <p>{{show_date}}</p>
+            </div>
+        </div>
+    {{/each}}
+</div>

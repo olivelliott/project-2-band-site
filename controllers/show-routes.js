@@ -15,8 +15,8 @@ router.get('/', (req, res) => {
             return;
         }
 
-        const shows = dbShowData.map((show) => show.get({ plain: true }));
-        res.render('shows', { shows })
+        const show = dbShowData.map((show) => show.get({ plain: true }));
+        res.render('shows', { show })
     })
     .catch(err => {
         console.log(err);
