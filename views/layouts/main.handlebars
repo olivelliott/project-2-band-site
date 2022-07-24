@@ -29,8 +29,11 @@
                 {{!-- forum = href="/forum" --}}
                 <a href="/" class="btn text-decoration-none">HOME</a>
                 <a href="/shows" class="btn text-decoration-none">SHOWS</a>
-                <a href="/login" class="btn text-decoration-none">LOGIN</a>
+                {{#if loggedIn}}
                 <button id="logout" class="btn">LOGOUT</button>
+                {{else}}
+                <a href="/login" class="btn text-decoration-none">LOGIN</a>
+                {{/if}}
                 </nav>
             </div>
             </header>
