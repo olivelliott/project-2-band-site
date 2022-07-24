@@ -2,6 +2,7 @@ const path = require("path");
 const routes = require("./controllers");
 const express = require("express");
 const session = require("express-session");
+// const gsap = require("gsap");
 const exphbs = require("express-handlebars");
 
 const app = express();

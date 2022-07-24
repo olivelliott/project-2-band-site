@@ -1,35 +1,33 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class Post extends Model {}
+class Newsletter extends Model {}
 
-Post.init(
+Newsletter.init(
     {
         id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
-            autoIncrement: true,
+            autoIncrement: true
         },
-        title: {
+        email: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        user_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: "user",
-                key: "id",
-            },
-        },
+            unique: true,
+            validate: {
+                isEmail: true
+            }
+        }
     },
     {
         sequelize,
+        timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: "post",
+        modelName: 'newsletter'
     }
 );
 
 
-module.exports = Post;
+module.exports = Newsletter

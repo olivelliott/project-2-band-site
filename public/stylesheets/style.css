@@ -1,0 +1,63 @@
+:root {
+    /* --background: #000000;
+    --card: #0f403f;
+    --card-hover: #204030;
+    --text: white; */
+    --button: #8f1010;
+}
+
+body, html {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+
+.hero-section {
+    margin-bottom: 30px;
+    height: 100vh;
+}
+
+.about-section {
+    margin: 15px;
+    padding: 20px;
+    height: 100vh;
+}
+
+.img {
+    width: 18rem;
+    height: 18rem;
+    /* position: absolute; */
+    top: 35%;
+    transform: perspective(1000px) rotateY(-25deg);
+}
+
+.newsletter {
+    height: 100vh;
+}
+
+.newsletter form {
+    margin-top: 50vh;
+}
+
+.newsletter input {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.newsletter button {
+    background-color: var(--button);
+    color: white;
+}
+
+#show-header {
+    border-bottom: 1px solid #ccc;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#show-header h1 {
+    margin-bottom: 10px;
+}
+
+#show-content:hover {
+    box-shadow: black 0px 3px 8px;
+};
