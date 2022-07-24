@@ -1,18 +1,26 @@
 <div class="card">
 
-    <header class="card-header">
-        <div>
-            {{!-- TITLE --}}
-        </div>
-    </header>
+  <header class="card-header">
+    <div>
+      {{! TITLE }}
+      <a href="{{post_url}}" target="_blank">{{title}}</a>
 
-    <div class="meta card-content">
-        <div>
-            {{!-- POST CONTENT --}}
-        </div>
-        <div>
-            {{!-- Username, date created, facebook / instagram logo --}}
-        </div>
+      <span>({{format_url post_url}})</span>
+
     </div>
+  </header>
+
+  <div class="meta card-content">
+    <div>
+      {{! POST CONTENT }}
+    </div>
+    <div>
+
+      {{! Username, date created, facebook / instagram logo }}
+
+      <a href="/post/{{id}}">{{comments.length}}
+        {{format_plural "comment" comments.length}}</a>
+    </div>
+  </div>
 
 </div>
