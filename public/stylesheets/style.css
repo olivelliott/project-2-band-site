@@ -1,11 +1,35 @@
+:root {
+    /* --background: #000000;
+    --card: #0f403f;
+    --card-hover: #204030;
+    --text: white; */
+    --button: #8f1010;
+}
+
 body, html {
     font-family: 'Montserrat', sans-serif;
 }
 
-.card a {
-    color: black;
+.newsletter input {
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.newsletter button {
+    background-color: var(--button);
+    color: white;
+}
+
+#show-header {
+    border-bottom: 1px solid #ccc;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#show-header h1 {
+    margin-bottom: 10px;
 }
 
 #show-content:hover {
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: black 0px 3px 8px;
 };
