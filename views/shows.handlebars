@@ -4,17 +4,19 @@
 
 <div class="wrapper row align-items-center">
     {{#each show as |show|}}
-        <div class="card col-sm-4 col-lg-3 text-center m-5 p-5" id="show-content">
-                <div class="card-title">
-                    <h1>{{venue}}</h1>
-                </div>
-                <div class="card-content">
-                    <p>{{show_date}}</p>
-                </div>
+        <div class="card h-100 col-sm-6 col-md-4 col-lg-3 text-center m-5" id="show-content">
+            <div class="card-title card-header venue-title">
+                <h1>{{venue}}</h1>
+            </div>
+            <div class="card-content mt-3">
+                <p>{{format_date show_date}}</p>
                 <a href="{{show_link}}" target="_blank" class="text-decoration-none" id="show-link">Visit Site</a>
+            </div>
         </div>
     {{/each}}
 </div>
 
 {{!-- ! TO DO: fix show-link functionality to go to a new page with just the link & exit server --}}
 <script type="text/javascript" src="/javascript/shows.js"></script>
+
+
