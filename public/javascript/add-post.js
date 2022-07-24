@@ -7,7 +7,7 @@ async function newFormHandler(event) {
     // ! TO DO : place a form in the forum-home to add a post
 
     const title = document.querySelector('input[name="title"]').value;
-    const post_url = document.querySelector('input[name="post-url"]').value;
+    const content = document.querySelector('input[name="content"]').value;
 
     // response: fetch('/api/posts)
     // method: POST
@@ -18,7 +18,7 @@ async function newFormHandler(event) {
         method: "POST",
         body: JSON.stringify({
             title,
-            post_url,
+            content,
         }),
         headers: {
             "Content-Type": "application/json",
