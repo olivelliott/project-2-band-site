@@ -1,9 +1,36 @@
-<ol class="forum-list">
+<section class="card text-start p-5 rounded-lg">
+  <h2>Get Connected!</h2>
+  <p>Want to meet up with other people going to the same shows? Need
+    recommendations for places to stay? Ask here!</p>
+
+  <form>
+    <div class="mb-3">
+      <label for="forum-title" class="form-label fw-bold">Post title</label>
+      <input type="text" id="forum-title" name="forum-title" class="form-control"/>
+    </div>
+    <div class="mb-3">
+      <label for="forum-content" class="form-label fw-bold">Text (optional)</label>
+      <textarea id="forum-content" class="textarea form-control"></textarea>
+    </div>
+    <button type="submit" class="btn btn-light">Post</button>
+  </form>
+</section>
+
+
+
+
+<div class="card w-75 flex-column text-start mx-5 mt-5">
   {{#each posts as |post|}}
     <div class="single-post">
-      <li>
-        {{post.title}}
-      </li>
+
+      <div class="card-header">{{title}}</div>
+    <div class="meta card-body">
+      {{post.content}}
     </div>
+
   {{/each}}
-</ol>
+</div>
+
+
+
+<script src="/javascript/add-post.js"></script>

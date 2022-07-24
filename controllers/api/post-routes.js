@@ -71,8 +71,8 @@ router.post("/", (req, res) => {
             title: req.body.title,
             user_id: req.session.user_id,
             content: req.body.content,
-            facebook: req.body.facebook,
-            instagram: req.body.instagram,
+            // facebook: req.body.facebook,
+            // instagram: req.body.instagram,
         })
         .then((dbPostData) => res.json(dbPostData))
         .catch((err) => {
