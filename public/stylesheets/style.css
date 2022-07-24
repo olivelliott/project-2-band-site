@@ -11,9 +11,23 @@ body, html {
     margin: 0px;
 }
 
+
+.wrapper {
+    justify-content: center;
+}
+
 .card {
-    height: auto;
+    height: 30vh;
     padding: 0px;
+    word-wrap: unset;
+}
+
+.card-header {
+    height: 20vh;
+}
+
+.card-header h1 {
+        margin-top: 15%;
 }
 
 .card-content {
