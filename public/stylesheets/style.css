@@ -2,6 +2,10 @@ body, html {
     font-family: 'Montserrat', sans-serif;
 }
 
+.card a {
+    color: black;
+}
+
 #show-content:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+};

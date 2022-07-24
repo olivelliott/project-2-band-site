@@ -1,10 +1,12 @@
 <div class="card">
     <div class="hero-section card-content p-5 text-center">
+        {{!-- ! This is where we can do our greensock animation --}}
         <h1>BAND NAME</h1>
     </div>
 </div>
 
 <div class="wrapper row">
+    {{!-- * See if we can get it to scroll through multiple images through greensock?  --}}
     <div class="card col-lg-3 col-sm-6 mt-2">
         <img src="https://images.pexels.com/photos/1749822/pexels-photo-1749822.jpeg?cs=srgb&dl=pexels-david-yu-1749822.jpg&fm=jpg" />
     </div>
@@ -29,10 +31,12 @@
         </div>
         <div class="mt-5">
             <label for="newsletter-email">email:</label>
-            <input type="text" name="newsletter-email" placeholder="email" />
+            <input type="text" name="newsletter-email" placeholder="email" id="newsletter-email" />
         </div>
         <div class="mt-2">
             <button type="submit" class="btn">submit</button>
         </div>
     </form>
 </div>
+
+<script type="text/javascript" src="/javascript/newsletter-signup.js"></script>

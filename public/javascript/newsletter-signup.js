@@ -1,14 +1,26 @@
 // async function
+async function newsletterSignupHandler(event) {
+    event.preventDefault();
 
-// querySelector for email in homepage newsletter email input
+    const email = document.querySelector('#newsletter-email').value.trim();
 
-// conditional if there is email value
+    console.log(email);
+    if (email) {
+        const response = await fetch('/api/newsletter', {
+            method: 'POST',
+            body: JSON.stringify({
+                email
+            }),
+            headers: {'Content-Type': 'application/json'}
+        });
 
-// ! TODO: create post route for newsletter
-// response: await fetch ('/api/newsletter')
-// method: 'POST'
-// stringify email
+        if (response.ok) {
+            alert('Email Added!')
+            document.location.reload();
+        } else {
+            alert(response.statusText);
+        }
+    }
+};
 
-// if response.ok reload
-
-// eventListener for 'submit' button in newsletter form
+document.querySelector('.newsletter-signup').addEventListener('submit', newsletterSignupHandler);
