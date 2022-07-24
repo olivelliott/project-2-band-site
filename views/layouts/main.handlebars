@@ -26,6 +26,7 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
 
+<<<<<<< HEAD
   <body>
     <div class="wrapper">
       <header>
@@ -33,6 +34,40 @@
           <h1>
             {{! ! TITLE }}
           </h1>
+=======
+    <body>
+        <div class="wrapper">
+            <header>
+                <div>
+                    <h1>
+                    {{!-- ! TITLE --}}
+                    </h1>
+                </div>
+            <div class="nav center">
+                <nav>
+                {{!-- ! NAVIGATION: forum, shows, login  --}}
+                {{!-- forum = href="/forum" --}}
+                <a href="/" class="btn text-decoration-none">HOME</a>
+                <a href="/shows" class="btn text-decoration-none">SHOWS</a>
+                <a href="/login" class="btn text-decoration-none">LOGIN</a>
+                <button id="logout" class="btn">LOGOUT</button>
+                </nav>
+            </div>
+            </header>
+
+            <section id="hero">
+                <div id="hero-section">
+                {{!-- ! HERO SECTION --}}
+                </div>
+            </section>
+
+            <main>
+                {{{body}}}
+            </main>
+
+            <footer>
+            </footer>
+>>>>>>> main
         </div>
         <div class="nav">
           <nav>
@@ -49,6 +84,7 @@
         </div>
       </header>
 
+<<<<<<< HEAD
       <section id="hero">
         <div id="hero-section">
           {{! ! HERO SECTION }}
@@ -67,5 +103,13 @@
             <script src="/javascript/logout.js"></script>
         {{/if}} --}}
   </body>
+=======
+        {{#if loggedIn}}
+            <script src="/javascript/logout.js"></script>
+        {{/if}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
+    </body>
+>>>>>>> main
 
 </html>

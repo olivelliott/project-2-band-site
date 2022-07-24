@@ -4,4 +4,8 @@ module.exports = {
       date
     ).getFullYear()}`;
   },
+  // format_link: link => {
+  //   return link
+  //     .replace('http://localhost:3001/', '')
+  // },
 };
