@@ -23,13 +23,14 @@
                     {{!-- ! TITLE --}}
                     </h1>
                 </div>
-            <div class="nav">
+            <div class="nav center">
                 <nav>
                 {{!-- ! NAVIGATION: forum, shows, login  --}}
                 {{!-- forum = href="/forum" --}}
-                {{!-- shows = href="/shows" --}}
-                {{!-- login = href="/login" --}}
-                <button id="logout" class="btn">logout</button>
+                <a href="/" class="btn text-decoration-none">HOME</a>
+                <a href="/shows" class="btn text-decoration-none">SHOWS</a>
+                <a href="/login" class="btn text-decoration-none">LOGIN</a>
+                <button id="logout" class="btn">LOGOUT</button>
                 </nav>
             </div>
             </header>
@@ -48,9 +49,11 @@
             </footer>
         </div>
 
-        {{!-- {{#if loggedIn}}
+        {{#if loggedIn}}
             <script src="/javascript/logout.js"></script>
-        {{/if}} --}}
+        {{/if}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
     </body>
 
 </html>

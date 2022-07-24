@@ -19,6 +19,10 @@ Show.init(
             type: DataTypes.DATEONLY,
             allowNull: false
         },
+        show_link: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
     },
     {
         sequelize,

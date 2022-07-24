@@ -1,0 +1,20 @@
+<div id="show-header">
+    <h1 class="text-center mb-5 mt-5">upcoming shows</h1>
+</div>
+
+<div class="wrapper row align-items-center">
+    {{#each show as |show|}}
+        <div class="card col-sm-4 col-lg-3 text-center m-5 p-5" id="show-content">
+                <div class="card-title">
+                    <h1>{{venue}}</h1>
+                </div>
+                <div class="card-content">
+                    <p>{{show_date}}</p>
+                </div>
+                <a href="{{show_link}}" target="_blank" class="text-decoration-none" id="show-link">Visit Site</a>
+        </div>
+    {{/each}}
+</div>
+
+{{!-- ! TO DO: fix show-link functionality to go to a new page with just the link & exit server --}}
+<script type="text/javascript" src="/javascript/shows.js"></script>
