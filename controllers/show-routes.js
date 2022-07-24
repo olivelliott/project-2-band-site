@@ -7,21 +7,21 @@ const { Post, User, Comment, Vote, Show } = require("../models");
 // GET all shows
 router.get('/', (req, res) => {
     Show.findAll({
-        attributes: ['id', 'venue', 'show_date', 'show_link']
+      attributes: ["id", "venue", "show_date", "location", "show_link"],
     })
-    .then((dbShowData) => {
+      .then((dbShowData) => {
         if (!dbShowData) {
-            res.status(404).json({ message: 'No upcoming shows!' });
-            return;
+          res.status(404).json({ message: "No upcoming shows!" });
+          return;
         }
 
         const show = dbShowData.map((show) => show.get({ plain: true }));
-        res.render('shows', { show })
-    })
-    .catch(err => {
+        res.render("shows", { show });
+      })
+      .catch((err) => {
         console.log(err);
         res.status(500).json(err);
-    })
+      });
 });
 
 router.get('/:id', (req, res) => {
@@ -29,7 +29,7 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'venue', 'show_date', 'show_link']
+        attributes: ['id', 'venue', 'show_date', 'location', 'show_link']
     })
     .then(dbShowData => {
         if (!dbShowData) {

@@ -5,7 +5,7 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         {{!-- ! TITLE --}}
-        <title></title>
+        <title>Insonmia</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"rel="stylesheet"/>
@@ -18,28 +18,19 @@
     <body>
         <div class="wrapper">
             <header>
-                <div>
-                    <h1>
-                    {{!-- ! TITLE --}}
-                    </h1>
+                <div class="nav center">
+                    <nav>
+                        <a href="/" class="btn text-decoration-none">HOME</a>
+                        <a href="/shows" class="btn text-decoration-none">SHOWS</a>
+                        <a href="/forum" class="btn text-decoration-none">FORUM</a>
+                        {{#if loggedIn}}
+                            <button id="logout" class="btn">LOGOUT</button>
+                        {{else}}
+                            <a href="/login" class="btn text-decoration-none">LOGIN</a>
+                        {{/if}}
+                    </nav>
                 </div>
-            <div class="nav center">
-                <nav>
-                {{!-- ! NAVIGATION: forum, shows, login  --}}
-                {{!-- forum = href="/forum" --}}
-                <a href="/" class="btn text-decoration-none">HOME</a>
-                <a href="/shows" class="btn text-decoration-none">SHOWS</a>
-                <a href="/login" class="btn text-decoration-none">LOGIN</a>
-                <button id="logout" class="btn">LOGOUT</button>
-                </nav>
-            </div>
             </header>
-
-            <section id="hero">
-                <div id="hero-section">
-                {{!-- ! HERO SECTION --}}
-                </div>
-            </section>
 
             <main>
                 {{{body}}}

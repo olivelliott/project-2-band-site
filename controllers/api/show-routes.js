@@ -6,7 +6,7 @@ const { User, Post, Comment, Show } = require("../../models");
 // GET all shows
 router.get('/', (req, res) => {
     Show.findAll({
-        attributes: ['id', 'venue', 'show_date', 'show_link']
+        attributes: ['id', 'venue', 'show_date', 'location', 'show_link']
     })
     .then(dbShowData => res.json(dbShowData))
     .catch(err => {
@@ -21,7 +21,7 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'venue', 'show_date', 'show_link']
+        attributes: ['id', 'venue', 'show_date',  'location', 'show_link']
     })
     .then(dbShowData => {
         if (!dbShowData) {
@@ -42,6 +42,7 @@ router.post('/', (req, res) => {
     Show.create({
         venue: req.body.venue,
         show_date: req.body.show_date,
+        location: req.body.location,
         show_link: req.body.show_link
     })
     .then(dbShowData => res.json(dbShowData))
