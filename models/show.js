@@ -15,6 +15,10 @@ Show.init(
             type: DataTypes.STRING,
             allowNull: false
         },
+        location: {
+            type: DataTypes.STRING,
+            allowNull: false
+        },
         show_date: {
             type: DataTypes.DATEONLY,
             allowNull: false
