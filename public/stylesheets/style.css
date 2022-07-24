@@ -8,6 +8,34 @@
 
 body, html {
     font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+
+.hero-section {
+    margin-bottom: 30px;
+    height: 100vh;
+}
+
+.about-section {
+    margin: 15px;
+    padding: 20px;
+    height: 100vh;
+}
+
+.img {
+    width: 18rem;
+    height: 18rem;
+    /* position: absolute; */
+    top: 35%;
+    transform: perspective(1000px) rotateY(-25deg);
+}
+
+.newsletter {
+    height: 100vh;
+}
+
+.newsletter form {
+    margin-top: 50vh;
 }
 
 .newsletter input {
