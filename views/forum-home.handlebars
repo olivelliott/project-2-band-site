@@ -1,36 +1,48 @@
-<section class="card text-start p-5 rounded-lg">
+{{! TOP SECTION }}
+<section class="mt-5 px-5 overflow-auto">
   <h2>Get Connected!</h2>
   <p>Want to meet up with other people going to the same shows? Need
     recommendations for places to stay? Ask here!</p>
 
-  <form>
+  <form class="mb-5">
     <div class="mb-3">
-      <label for="forum-title" class="form-label fw-bold">Post title</label>
-      <input type="text" id="forum-title" name="forum-title" class="form-control"/>
+      <label for="forum-title" class="form-label fw-bold">New post title</label>
+      <input
+        type="text"
+        id="forum-title"
+        name="forum-title"
+        class="form-control"
+      />
     </div>
     <div class="mb-3">
-      <label for="forum-content" class="form-label fw-bold">Text (optional)</label>
+      <label for="forum-content" class="form-label fw-bold">New post text
+        (optional)</label>
       <textarea id="forum-content" class="textarea form-control"></textarea>
     </div>
     <button type="submit" class="btn btn-light">Post</button>
   </form>
 </section>
 
+{{! TOP SECTION END }}
 
+{{! POSTS/FORUM }}
 
+<section class="mt-5 bg-secondary overflow-auto">
+  <h2 class="mb-5 pt-5 px-5 text-white">Recent Posts</h2>
 
-<div class="card w-75 flex-column text-start mx-5 mt-5">
-  {{#each posts as |post|}}
-    <div class="single-post">
+  <div class="card flex-column text-start mx-5 mt-10 overflow-auto">
 
-      <div class="card-header">{{title}}</div>
-    <div class="meta card-body">
-      {{post.content}}
-    </div>
+    {{#each posts as |post|}}
 
-  {{/each}}
-</div>
+      <a href="/post/{{post.id}}"><div
+          class="card-header"
+        >{{post.title}}</div></a>
+      <div class="meta card-body">{{post.content}}</div>
 
+    {{/each}}
 
+  </div>
+
+</section>
 
 <script src="/javascript/add-post.js"></script>

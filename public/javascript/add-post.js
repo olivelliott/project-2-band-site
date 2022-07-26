@@ -4,7 +4,6 @@ async function newFormHandler(event) {
     event.preventDefault();
 
     // title & content querySelector from forum-home element
-    // ! TO DO : place a form in the forum-home to add a post
 
     const title = document.querySelector('input[name="title"]').value;
     const content = document.querySelector('input[name="content"]').value;
