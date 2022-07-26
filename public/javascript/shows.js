@@ -14,3 +14,7 @@
 // }
 
 // document.querySelector('#show-link').addEventListener('click', showHandler);
+
+// function fetchEvents() {
+//     const requestUrl = 
+// }

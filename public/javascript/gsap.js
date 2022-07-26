@@ -48,6 +48,8 @@ let images = gsap.utils.toArray(".img");
 // always set the transforms directly via GSAP to ensure accuracy and speed
 gsap.set(images, { perspective: 1000, rotationY: -25 });
 
+// ScrollTrigger.matchMedia({
+//     "(min-width: 960px)": function(images) {
 // loop through each image...
 images.forEach((image, i) => {
   // make an Array of the elements to the left and to the right of this image
@@ -95,3 +97,5 @@ images.forEach((image, i) => {
     });
   });
 });
+//     }
+// })
