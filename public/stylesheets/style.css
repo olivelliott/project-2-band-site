@@ -62,6 +62,8 @@ body, html {
 #images-home {
     margin-left: auto;
     margin-right: auto;
+    margin-top: 15vh;
+    flex-wrap: nowrap;
 };
 
 .band-pic {
@@ -70,7 +72,7 @@ body, html {
 
 .img {
     width: 25rem;
-    height: 25rem;
+    /* height: 25rem; */
     top: 35%;
     transform: perspective(1000px) rotateY(-25deg);
 }
@@ -85,7 +87,6 @@ body, html {
     left: 30%;
     z-index: 4;
     height: 50vh;
-
 }
 
 #img-3 {
@@ -99,6 +100,7 @@ body, html {
     z-index: 2;
     height: 50vh;
 }
+
 
 .newsletter-section {
     height: 100vh;
