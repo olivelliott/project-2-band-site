@@ -1,37 +1,54 @@
 :root {
-    /* --background: #000000;
-    --card: #0f403f; */
-    --card-hover: rgba(0, 0, 0, 0.24) 0px 3px 8px;;
-    --text: white;
-    --button: #8f1010;
+    --background: #2A2356;
+    --card: #E0D9F6;
+    --card-header: #586AE2;
+    --text: #6ECBF5;
+    /* --card-hover: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+    --card-hover: #C252E1 0px 0px 10px;
 }
 
 body, html {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Kanit', sans-serif;
     margin: 0px;
+    background-color: var(--background);
+    color: var(--text);
+    font-size: 18px;
 }
-
 
 .wrapper {
     justify-content: center;
+}
+
+.btn {
+    color: var(--text);
+    font-size: 16px;
+}
+
+.btn:hover {
+    color: white;
 }
 
 .card {
     height: 30vh;
     padding: 0px;
     word-wrap: unset;
+    background-color: var(--card);
+    border: none;
 }
 
 .card-header {
     height: 20vh;
+    background-color: var(--card-header);
 }
 
 .card-header h1 {
-        margin-top: 15%;
+    margin-top: 15%;
 }
 
 .card-content {
     margin-top: auto;
+    background-color: var(--card);
+    color: var(--background)
 }
 
 .hero-section {
@@ -42,9 +59,18 @@ body, html {
     height: 100vh;
 }
 
+#images-home {
+    margin-left: auto;
+    margin-right: auto;
+};
+
+.band-pic {
+    background-image: cover;
+}
+
 .img {
-    width: 18rem;
-    height: 18rem;
+    width: 25rem;
+    height: 25rem;
     top: 35%;
     transform: perspective(1000px) rotateY(-25deg);
 }
@@ -52,51 +78,79 @@ body, html {
 #img-1 {
     left: 20%;
     z-index: 5;
+    height: 50vh;
 }
 
 #img-2 {
     left: 30%;
     z-index: 4;
+    height: 50vh;
+
 }
 
 #img-3 {
     left: 40%;
     z-index: 3;
+    height: 50vh;
 }
 
-.newsletter {
+#img-4 {
+    left: 50%;
+    z-index: 2;
+    height: 50vh;
+}
+
+.newsletter-section {
     height: 100vh;
 }
 
-.newsletter form {
-    margin-top: 100vh;
+.newsletter-signup {
+    margin-left: 15vh;
+    margin-right: 15vh;
+    padding: 10vh;
+    border-radius: 10px;
 }
 
 .newsletter input {
-    border-radius: 5px;
+    border-radius: 10px;
     border: 1px solid black;
 }
 
-.newsletter button {
-    background-color: var(--button);
-    color: white;
+#newsletter-submit {
+    background-color: #2A2356;
 }
 
 .venue-title {
     text-transform: uppercase;
-    /* overflow: none; */
 }
 
 #show-header {
-    border-bottom: 1px solid #ccc;
-    margin-right: 15px;
-    margin-left: 15px;
+    border-bottom: 1px solid #defe47;
+    margin-right: 30vh;
+    margin-left: 30vh;
 }
 
 #show-header h1 {
     margin-bottom: 10px;
 }
 
+#show-venue-title {
+    background-color: #C252E1;
+    color: white;
+}
+
 #show-content:hover {
-    box-shadow: var(--card-hover);
+    box-shadow: #defe47 0px 0px 10px;
+}
+
+#show-link {
+    background-color: grey;
+    color: var(--background);
+}
+
+
+@media only screen and (max-width: 780px) {
+    #images-home {
+        display: none;
+    }
 };
