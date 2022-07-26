@@ -2,7 +2,7 @@ const { Newsletter, Post } = require('../models')
 
 const newsletterData = [
     {
-        email: ''
+        email: 'vahlalla@gmail.com'
     },
 ]
 
