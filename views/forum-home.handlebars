@@ -1,9 +1,9 @@
 <ol class="forum-list">
-    {{!-- {{#each posts as |post|}} --}}
+  {{#each posts as |post|}}
     <div class="single-post">
-        <li>
-        {{!-- {{> forum-info post }} --}}
-        </li>
+      <li>
+        {{post.title}}
+      </li>
     </div>
-    {{/each}}
+  {{/each}}
 </ol>

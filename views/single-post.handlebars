@@ -1,11 +1,26 @@
 {{!-- {{> forum-info post}} --}}
 
+{{> forum-info post}}
+
 {{!-- IF LOGGED IN: comments > comment-form --}}
 
-{{!-- {{> comments post.comments}}
+{{#if loggedIn}}
+<form class="comment-form">
+  <div>
+    <textarea name="comment-body"></textarea>
+  </div>
+
+  <div>
+    <button type="submit">Add comment</button>
+  </div>
+</form>
+{{/if}}
+
+{{> comments post.comments}}
 
 
 {{#if loggedIn}}
 <script src="/javascript/comment.js"></script>
-<script src="/javascript/upvote.js"></script>
-{{/if}} --}}
+{{/if}} 
+
+<h1>hello</h1>

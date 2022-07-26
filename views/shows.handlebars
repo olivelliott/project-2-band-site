@@ -1,0 +1,24 @@
+<div id="show-header">
+    <h1 class="text-center mb-5 mt-5">upcoming shows</h1>
+</div>
+
+<div class="wrapper row align-items-center">
+    {{#each show as |show|}}
+        <div class="card col-sm-6 col-md-5 col-lg-3 text-center m-5" id="show-content">
+            <div class="card-title card-header venue-title" id="show-venue-title">
+                <h1>{{venue}}</h1>
+            </div>
+            <div class="card-content" id="show-details">
+                <p class="card-subtitle">{{location}}</p>
+                <p>{{format_date show_date}}</p>
+                {{!-- <div id="show-link">
+                    <a href="{{show_link}}" target="_blank" class="text-decoration-none" id="show-link">Visit Site</a>
+                </div> --}}
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+<script type="text/javascript" src="/javascript/shows.js"></script>
+
+
