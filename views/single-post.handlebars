@@ -1,4 +1,36 @@
-{{> forum-info post}}
+<div class="card">
+  <div class="card-header  flex-row justify-space-between">
+    <h2>
+      <a href="/posts/{{post.id}}">
+        <div class="col-8">{{post.forum-title}}</div>
+      </a>
+    </h2>
+    <div class="col-3">posted by {{user.username}} on {{format_date post.dateCreated}}
+    </div>
+  </div>  
+  <p class="card-body">
+   {{post.content}}
+  </p>
+</div>
+<input type="hidden" name="post-id" value="{{post.id}}"/>
+{{!-- {{#if loggedIn}} --}}
+<div class="card">
+  <div class="card-header"></div>
+  <form class="card-body" id="new-comment-form">
+    
+    <p class="form-label">Comment:</p>
+    <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
+    <button type="submit" class="btn btn-primary">Submit:</button>
+  </form>
+{{> comments post.comments}}
+</div>
+{{!-- {{/if}} --}}
+<script src="/js/comment.js"></script>
+
+
+{{!-- {{> forum-info post}}
+
+<div>{{post.content}}</div>
 
 
 {{#if loggedIn}}
@@ -23,4 +55,6 @@
 <script src="/javascript/comment.js"></script>
 {{/if}} 
 
-<h1>hello</h1>
+<h1>hello</h1> --}}
+
+
