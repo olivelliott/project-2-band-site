@@ -59,6 +59,15 @@ body, html {
     height: 100vh;
 }
 
+#logo {
+    height: 100vh;
+    width: 100vh;
+    margin: auto;
+    position: relative;
+    right: 4vw;
+
+}
+
 #images-home {
     margin-left: auto;
     margin-right: auto;
