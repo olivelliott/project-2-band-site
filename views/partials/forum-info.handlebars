@@ -1,26 +1,24 @@
-<div class="card">
+TODO:
+{{! Username, date created, facebook / instagram logo }}
 
-  <header class="card-header">
-    <div>
-      {{! TITLE }}
-      <a href="{{content}}" target="_blank">{{title}}</a>
+<div class="card mb-5">
 
-      <span>({{format_url content}})</span>
-
-    </div>
+  <header class="card-header bg-secondary">
+    <h4 class="card-title"><a
+        href="/post/{{id}}"
+        target="_blank"
+      >{{title}}</a></h4>
+    <h6 class="mb-2 text-light">Posted by
+      {{user.username}}
+      on
+      {{created_at}}</h6>
   </header>
 
   <div class="meta card-content">
-    <div>
-      {{! POST CONTENT }}
-    </div>
-    <div>
-
-      {{! Username, date created, facebook / instagram logo }}
-
-      <a href="/post/{{id}}">{{comments.length}}
-        {{format_plural "comment" comments.length}}</a>
-    </div>
+    <p class="card-text">{{post.content}}</p>
   </div>
 
 </div>
+
+{{!-- <a href="/post/{{id}}">{{comments.length}}
+        {{format_plural "comment" comments.length}}</a> --}}

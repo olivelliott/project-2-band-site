@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
     console.log(req.session);
     console.log("======================");
     Post.findAll({
-            attributes: ["id", "title", "user_id"],
+            attributes: ["id", "title", "user_id", "content"],
             include: [{
                     model: Comment,
                     attributes: ["id", "comment_text", "post_id", "user_id"],
@@ -43,9 +43,9 @@ router.get("/", (req, res) => {
 
 //! add withAuth after the path below once pathways are cleared
 
-router.get("/edit/:id", (req, res) => {
-    Post.findByPk(req.params.id, {
-            attributes: ["id", "title", "user_id"],
+router.get("/posts/:id", (req, res) => {
+    Post.findById(req.params.id, {
+            attributes: ["id", "title", "user_id", "content"],
             include: [{
                     model: Comment,
                     attributes: ["id", "comment_text", "user_id", "post_id"],
