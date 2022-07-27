@@ -30,7 +30,7 @@ router.get('/:id', (req, res) => {
 
 // CREATE a new comment
 // ! text, user id, post id
-router.post("/", withAuth, (req, res) => {
+router.post("/",  (req, res) => {
     // expects => {comment_text: "This is the comment", user_id: 1, post_id: 2}
     Comment.create({
             comment_text: req.body.comment_text,
