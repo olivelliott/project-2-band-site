@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const sequelize = require("../config/connection");
-const { Post, User, Comment, Vote } = require("../models");
+const { Post, User, Comment, Show } = require("../models");
 
 router.get("/login", (req, res) => {
     if (req.session.loggedIn) {
