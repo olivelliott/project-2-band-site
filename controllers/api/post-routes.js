@@ -31,15 +31,16 @@ router.get("/", (req, res) => {
 });
 
 // GET a single post
+
 router.get("/:id", (req, res) => {
     Post.findOne({
             where: {
                 id: req.params.id,
             },
-            attributes: ["id", "title", "user_id"],
+            attributes: ["id", "title", "content", "user_id"],
             include: [{
                     model: Comment,
-                    attributes: ["id", "user_id", "title"],
+                    attributes: ["id", "comment_text", "user_id", "post_id"],
                     include: {
                         model: User,
                         attributes: ["username"],
@@ -71,8 +72,8 @@ router.post("/", (req, res) => {
             title: req.body.title,
             user_id: req.session.user_id,
             content: req.body.content,
-            facebook: req.body.facebook,
-            instagram: req.body.instagram,
+            // facebook: req.body.facebook,
+            // instagram: req.body.instagram,
         })
         .then((dbPostData) => res.json(dbPostData))
         .catch((err) => {
