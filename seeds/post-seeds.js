@@ -9,7 +9,7 @@ const postData = [
     {
         title: 'Having a laze day.',
         content: 'today i dont feel like doiung anything. i just wanna lay in my bed.',
-        user_id: 1,
+        user_id: 15,
     },
     {
         title: 'Played video games.',
@@ -84,7 +84,7 @@ const postData = [
     {
         title: 'Can you pay my telephone bill',
         content: 'Paycheck just hit and im already broke.',
-        user_id: 2,
+        user_id: 15,
     },
     {
         title: 'An apple a day',
