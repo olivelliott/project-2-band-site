@@ -5,7 +5,7 @@
         <div class="col-8">{{post.forum-title}}</div>
       </a>
     </h2>
-    <div class="col-3 mx-4">Posted by {{user.username}} on {{format_date post.dateCreated}}
+    <div class="col-3 mx-4">Posted by {{user.username.post_id}} on {{format_date post.dateCreated}}
     </div>
   </div>  
   <p class="card mx-5 px-3 py-2 forum-text">
@@ -21,12 +21,13 @@
 
   <form class="card-body mx-4" id="new-comment-form">
     
-    <p class="form-label">Comment:</p>
-    <textarea class="form-input form-control card" id="comment-body" name="comment-body"></textarea>
-    <br>
+    <p class="form-label px-2">Comment:</p>
+    
+    <textarea class="form-input form-control" id="comment-body" name="comment-body"></textarea>
     <button type="submit" class="btn btn-primary">Submit:</button>
   </form>
 {{> comments post.comments}}
+
 
 {{!-- {{/if}} --}}
 <script src="/js/comment.js"></script>
