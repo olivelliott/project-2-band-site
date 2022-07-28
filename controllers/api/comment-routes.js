@@ -15,18 +15,18 @@ router.get("/", (req, res) => {
 });
 
 // GET a single comment
-router.get('/:id', (req, res) => {
+router.get("/:id", (req, res) => {
     Comment.findOne({
-        where: {
-            id: req.params.id
-        }
-    })
-    .then(dbCommentData => res.json(dbCommentData))
-    .catch(err => {
-        console.log(err);
-        res.status(500).json(err);
-    })
-})
+            where: {
+                id: req.params.id,
+            },
+        })
+        .then((dbCommentData) => res.json(dbCommentData))
+        .catch((err) => {
+            console.log(err);
+            res.status(500).json(err);
+        });
+});
 
 // CREATE a new comment
 // ! text, user id, post id
@@ -46,24 +46,24 @@ router.post("/", withAuth, (req, res) => {
 
 // UPDATE a comment
 
-// DELETE a comment
-router.delete("/:id", withAuth, (req, res) => {
-    Comment.destroy({
-            where: {
-                id: req.params.id,
-            },
-        })
-        .then((dbCommentData) => {
-            if (!dbCommentData) {
-                res.status(404).json({ message: "No comment found with this id!" });
-                return;
-            }
-            res.json(dbCommentData);
-        })
-        .catch((err) => {
-            console.log(err);
-            res.status(500).json(err);
-        });
-});
+// // DELETE a comment
+// router.delete("/:id", withAuth, (req, res) => {
+//     Comment.destroy({
+//             where: {
+//                 id: req.params.id,
+//             },
+//         })
+//         .then((dbCommentData) => {
+//             if (!dbCommentData) {
+//                 res.status(404).json({ message: "No comment found with this id!" });
+//                 return;
+//             }
+//             res.json(dbCommentData);
+//         })
+//         .catch((err) => {
+//             console.log(err);
+//             res.status(500).json(err);
+//         });
+// });
 
 module.exports = router;
