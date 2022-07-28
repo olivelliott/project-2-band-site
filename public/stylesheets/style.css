@@ -17,6 +17,10 @@ html {
     font-size: 18px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .wrapper {
     justify-content: center;
 }
@@ -61,10 +65,21 @@ html {
     height: 100vh;
 }
 
+#logo {
+    height: 100vh;
+    width: 100vh;
+    margin: auto;
+    position: relative;
+    right: 4vw;
+
+}
+
 #images-home {
     margin-left: auto;
     margin-right: auto;
-}
+    margin-top: 15vh;
+    flex-wrap: nowrap;
+};
 
 .band-pic {
     background-image: cover;
@@ -72,7 +87,7 @@ html {
 
 .img {
     width: 25rem;
-    height: 25rem;
+    /* height: 25rem; */
     top: 35%;
     transform: perspective(1000px) rotateY(-25deg);
 }
@@ -100,6 +115,7 @@ html {
     z-index: 2;
     height: 50vh;
 }
+
 
 .newsletter-section {
     height: 100vh;
