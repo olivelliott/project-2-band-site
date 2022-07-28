@@ -13,10 +13,10 @@ router.get("/", withAuth, (req, res) => {
     console.log(req.session);
     console.log("======================");
     Post.findAll({
-            attributes: ["id", "title", "user_id", "content"],
+            attributes: ["id", "title", "user_id", "content", "created_at"],
             include: [{
                     model: Comment,
-                    attributes: ["id", "comment_text", "post_id", "user_id"],
+                    attributes: ["id", "comment_text", "post_id", "user_id", "created_at"],
                     include: {
                         model: User,
                         attributes: ["username"],
@@ -45,10 +45,10 @@ router.get("/", withAuth, (req, res) => {
 
 router.get("/posts/:id", withAuth, (req, res) => {
     Post.findByPk(req.params.id, {
-            attributes: ["id", "title", "user_id", "content"],
+            attributes: ["id", "title", "user_id", "content", "created_at"],
             include: [{
                     model: Comment,
-                    attributes: ["id", "comment_text", "user_id", "post_id"],
+                    attributes: ["id", "comment_text", "user_id", "post_id", "created_at"],
                     include: {
                         model: User,
                         attributes: ["username", "instagram", "facebook"],

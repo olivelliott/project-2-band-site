@@ -6,6 +6,7 @@
     --forum-text: black;
     /* --card-hover: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
     --card-hover: #c252e1 0px 0px 10px;
+    --pink: #c252e1;
 }
 
 body,
@@ -175,13 +176,39 @@ a:hover {
     color: var(--background);
 }
 
+#single-post {
+    color: var(--background);
+}
+
+#single-post-content {
+    margin-left: 5vw;
+    margin-right: 5vw;
+}
+
+#single-post-header {
+    background-color: var(--pink);
+    color: white;
+    height: 15vh;
+}
+
+#forum-post {
+    height: 26vh;
+}
+
 #forum-post:hover {
     box-shadow: #defe47 0px 0px 10px;
 }
 
 #post-user {
     border-bottom: 1px solid white;
+}
 
+#comment-submit {
+    background-color: var(--pink);
+}
+
+.comment {
+    height: 15vh;
 }
 
 @media only screen and (max-width: 780px) {
