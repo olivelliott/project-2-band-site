@@ -29,19 +29,19 @@ const showData = [
         venue: 'The Stockroom at 230',
         location: ' Raleigh ',
         show_date: '2022-10-20',
-        show_link: 'www.www.thestockroomat230.com/',
+        show_link: 'www.thestockroomat230.com/',
     },
     {
         venue: 'The Pavilion',
         location: ' Raleigh ',
         show_date: '2022-11-10',
-        show_link: 'www.www.angusbarn.com//pavilion.html',
+        show_link: 'www.angusbarn.com//pavilion.html',
     },
     {
         venue: 'Ransom Pub & Event venue',
         location: ' Boone ',
         show_date: '2022-12-14',
-        show_link: 'www.www.ransomboone.com/',
+        show_link: 'www.ransomboone.com/',
     },
 ]
 
