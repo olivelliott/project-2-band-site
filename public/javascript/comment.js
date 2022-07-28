@@ -5,7 +5,7 @@ async function commentFormHandler(event) {
 
     // querySelector for comment_text
     const comment_text = document
-        .querySelector('textarea[name="comment-body"]')
+        .querySelector("#comment-body")
         .value.trim();
 
     // querySelector for post_id
@@ -42,5 +42,5 @@ async function commentFormHandler(event) {
 
 // eventListener for 'submit' button in comment form
 document
-    .querySelector(".comment-form")
+    .querySelector("#new-comment-form")
     .addEventListener("submit", commentFormHandler);
