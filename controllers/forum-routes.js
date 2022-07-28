@@ -44,7 +44,7 @@ router.get("/", (req, res) => {
 //! add withAuth after the path below once pathways are cleared
 
 router.get("/posts/:id", (req, res) => {
-    Post.findById(req.params.id, {
+    Post.findByPk(req.params.id, {
             attributes: ["id", "title", "user_id", "content"],
             include: [{
                     model: Comment,
