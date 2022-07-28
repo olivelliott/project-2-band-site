@@ -1,8 +1,8 @@
-const { Newsletter, Post } = require("../models");
+const { Newsletter, Post } = require('../models');
 
 const newsletterData = [
   {
-    email: "vahlalla@gmail.com",
+    email: 'vahlalla@gmail.com',
   },
 ];
 

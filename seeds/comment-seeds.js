@@ -1,4 +1,4 @@
-const { Comment } = require("../models");
+const { Comment } = require('../models');
 
 const commentData = [
   {
@@ -14,7 +14,7 @@ const commentData = [
     post_id: 1,
   },
   {
-    comment_text: "Sounds awesome, would love to meet up as well.",
+    comment_text: 'Sounds awesome, would love to meet up as well.',
     user_id: 3,
     post_id: 3,
   },
@@ -25,12 +25,12 @@ const commentData = [
   },
   {
     comment_text:
-      "Hey thanks for your support. New album is set for early 2023. Not sure about the vinyl yet...having supply chain issues. Peace. - VN",
+      'Hey thanks for your support. New album is set for early 2023. Not sure about the vinyl yet...having supply chain issues. Peace. - VN',
     user_id: 4,
     post_id: 4,
   },
   {
-    comment_text: "Whoaa rare Vim sighting",
+    comment_text: 'Whoaa rare Vim sighting',
     user_id: 4,
     post_id: 4,
   },
