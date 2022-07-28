@@ -26,29 +26,26 @@
   <p>Click post title to reply</p>
 
   {{#each posts as |post|}}
+      <a href="/forum/posts/{{post.id}}" class="text-primary" id="forum-link">
 
-    <div
-      class="card row-hover pos-relative py-3 px-3 mb-3 border-warning border-top-0 border-right-0 border-bottom-0 rounded-3"
-    >
-      <div class="row align-items-center">
-        <div class="col-md-8 mb-3 mb-sm-0">
-          <h5>
-            <a
-              href="/forum/posts/{{post.id}}"
-              class="text-primary"
-            >{{post.title}}</a>
-          </h5>
-          <p class="text-sm"><span class="op-6">Posted by</span>
-            <a class="text-black" href="#">{{user.username}}</a></p>
+    <div class="card row-hover pos-relative py-3 px-3 mb-3 border-warning border-top-0 border-right-0 border-bottom-0 rounded-3">
+        <div class="row align-items-center">
+          <div class="col-md-8 mb-3 mb-sm-0">
+            <h5>
+              {{post.title}}
+            </h5>
+            <p class="text-sm"><span class="op-6">Posted by</span>{{user.username}}</p>
 
-          <div class="meta card-content">
-            <p class="card-text">{{post.content}}</p>
+            <div class="meta card-content">
+              <p class="card-text">{{post.content}}</p>
+            </div>
+
           </div>
 
         </div>
-
-      </div>
     </div>
+          </a>
+
 
   {{/each}}
 
@@ -59,3 +56,4 @@
 {{! POSTS/FORUM }}
 
 <script src="/javascript/add-post.js"></script>
+<script src="/javascript/forum.js"></script>
