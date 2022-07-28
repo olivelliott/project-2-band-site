@@ -1,11 +1,11 @@
-const { Newsletter, Post } = require('../models')
+const { Newsletter, Post } = require("../models");
 
 const newsletterData = [
-    {
-        email: 'vahlalla@gmail.com'
-    },
-]
+  {
+    email: "vahlalla@gmail.com",
+  },
+];
 
-const seedNews = () => Post.bulkCreate(newsletterData)
+const seedNews = () => Post.bulkCreate(newsletterData);
 
-module.exports = seedNews
+module.exports = seedNews;

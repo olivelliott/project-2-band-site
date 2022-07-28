@@ -1,193 +1,189 @@
 :root {
-    --background: #2a2356;
-    --card: #e0d9f6;
-    --card-header: #586ae2;
-    --text: #6ecbf5;
-    --forum-text: black;
-    /* --card-hover: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    --card-hover: #c252e1 0px 0px 10px;
+  --background: #2a2356;
+  --card: #e0d9f6;
+  --card-header: #586ae2;
+  --text: #6ecbf5;
+  --forum-text: black;
+  /* --card-hover: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
+  --card-hover: #c252e1 0px 0px 10px;
 }
 
 body,
 html {
-    font-family: "Kanit", sans-serif;
-    margin: 0px;
-    background-color: var(--background);
-    color: var(--text);
-    font-size: 18px;
+  font-family: "Kanit", sans-serif;
+  margin: 0px;
+  background-color: var(--background);
+  color: var(--text);
+  font-size: 18px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .wrapper {
-    justify-content: center;
+  justify-content: center;
 }
 
 .btn {
-    color: var(--text);
-    font-size: 16px;
+  color: var(--text);
+  font-size: 16px;
 }
 
 .btn:hover {
-    color: white;
+  color: white;
 }
 
 .card {
-    height: 30vh;
-    padding: 0px;
-    word-wrap: unset;
-    background-color: var(--card);
-    border: none;
+  height: 30vh;
+  padding: 0px;
+  word-wrap: unset;
+  background-color: var(--card);
+  border: none;
 }
 
 .card-header {
-    height: 20vh;
-    background-color: var(--card-header);
+  height: 20vh;
+  background-color: var(--card-header);
 }
 
 .card-header h1 {
-    margin-top: 2vh;
+  margin-top: 2vh;
 }
 
 .card-body {
-    display: flex;
+  display: flex;
 }
 
 .card-content {
-    margin-top: auto;
-    background-color: var(--card);
-    color: var(--background);
+  margin-top: auto;
+  background-color: var(--card);
+  color: var(--background);
 }
 
 .hero-section {
-    height: 100vh;
+  height: 100vh;
 }
 
 .about-section {
-    height: 100vh;
-    margin-top: 35vh;
+  height: 100vh;
+  margin-top: 35vh;
 }
 
 #logo {
-    height: 100vh;
-    width: 100vh;
-    margin: auto;
-    position: relative;
+  height: 100vh;
+  width: 100vh;
+  margin: auto;
+  position: relative;
 }
 
 #images-home {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 15vh;
-    flex-wrap: nowrap;
-};
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15vh;
+  flex-wrap: nowrap;
+}
 
 .band-pic {
-    background-image: cover;
+  background-image: cover;
 }
 
 .img {
-    width: 25rem;
-    /* height: 25rem; */
-    top: 35%;
-    transform: perspective(1000px) rotateY(-25deg);
+  width: 25rem;
+  /* height: 25rem; */
+  top: 35%;
+  transform: perspective(1000px) rotateY(-25deg);
 }
 
 #img-1 {
-    left: 20%;
-    z-index: 5;
-    height: 50vh;
+  left: 20%;
+  z-index: 5;
+  height: 50vh;
 }
 
 #img-2 {
-    left: 30%;
-    z-index: 4;
-    height: 50vh;
+  left: 30%;
+  z-index: 4;
+  height: 50vh;
 }
 
 #img-3 {
-    left: 40%;
-    z-index: 3;
-    height: 50vh;
+  left: 40%;
+  z-index: 3;
+  height: 50vh;
 }
 
 #img-4 {
-    left: 50%;
-    z-index: 2;
-    height: 50vh;
+  left: 50%;
+  z-index: 2;
+  height: 50vh;
 }
 
-
 .newsletter-section {
-    height: 100vh;
+  height: 100vh;
 }
 
 .newsletter-signup {
-    margin-left: 15vh;
-    margin-right: 15vh;
-    padding: 10vh;
-    border-radius: 10px;
+  margin-left: 15vh;
+  margin-right: 15vh;
+  padding: 10vh;
+  border-radius: 10px;
 }
 
 .newsletter input {
-    border-radius: 10px;
-    border: 1px solid black;
+  border-radius: 10px;
+  border: 1px solid black;
 }
 
 #newsletter-submit {
-    background-color: #2a2356;
+  background-color: #2a2356;
 }
 
 .venue-title {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 #show-header {
-    border-bottom: 1px solid #defe47;
-    margin-right: 30vh;
-    margin-left: 30vh;
+  border-bottom: 1px solid #defe47;
+  margin-right: 30vh;
+  margin-left: 30vh;
 }
 
 #show-header h1 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #show-venue-title {
-    background-color: #c252e1;
-    color: white;
+  background-color: #c252e1;
+  color: white;
 }
 
 #show-content:hover {
-    box-shadow: #defe47 0px 0px 10px;
+  box-shadow: #defe47 0px 0px 10px;
 }
 
 #show-details {
-    margin-top: 1vh;
+  margin-top: 1vh;
 }
 
 .forum-post-style {
-    color: var(--background);
+  color: var(--background);
 }
 
 #forum-post:hover {
-    box-shadow: #defe47 0px 0px 10px;
+  box-shadow: #defe47 0px 0px 10px;
 }
 
 #post-user {
-    border-bottom: 1px solid white;
-
+  border-bottom: 1px solid white;
 }
 
 @media only screen and (max-width: 780px) {
-    #images-home {
-        display: none;
-    }
-}
-
-;
+  #images-home {
+    display: none;
+  }
+} ;

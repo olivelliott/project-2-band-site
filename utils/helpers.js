@@ -1,8 +1,8 @@
 module.exports = {
-  format_date: date => {
-    return `${new Date(date).getMonth() + 1}/${new Date(date).getDate()}/${new Date(
+  format_date: (date) => {
+    return `${new Date(date).getMonth() + 1}/${new Date(
       date
-    ).getFullYear()}`;
+    ).getDate()}/${new Date(date).getFullYear()}`;
   },
   // format_link: link => {
   //   return link
