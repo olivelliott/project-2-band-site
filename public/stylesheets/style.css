@@ -1,14 +1,16 @@
 :root {
-    --background: #2A2356;
-    --card: #E0D9F6;
-    --card-header: #586AE2;
-    --text: #6ECBF5;
+    --background: #2a2356;
+    --card: #e0d9f6;
+    --card-header: #586ae2;
+    --text: #6ecbf5;
+    --forum-text: black;
     /* --card-hover: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    --card-hover: #C252E1 0px 0px 10px;
+    --card-hover: #c252e1 0px 0px 10px;
 }
 
-body, html {
-    font-family: 'Kanit', sans-serif;
+body,
+html {
+    font-family: "Kanit", sans-serif;
     margin: 0px;
     background-color: var(--background);
     color: var(--text);
@@ -48,7 +50,7 @@ body, html {
 .card-content {
     margin-top: auto;
     background-color: var(--card);
-    color: var(--background)
+    color: var(--background);
 }
 
 .hero-section {
@@ -128,7 +130,7 @@ body, html {
 }
 
 #newsletter-submit {
-    background-color: #2A2356;
+    background-color: #2a2356;
 }
 
 .venue-title {
@@ -146,7 +148,7 @@ body, html {
 }
 
 #show-venue-title {
-    background-color: #C252E1;
+    background-color: #c252e1;
     color: white;
 }
 
@@ -159,9 +161,10 @@ body, html {
     color: var(--background);
 }
 
-
 @media only screen and (max-width: 780px) {
     #images-home {
         display: none;
     }
-};
+}
+
+;
