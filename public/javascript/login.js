@@ -27,8 +27,8 @@ async function signUpFormHandler(event) {
 
     const username = document.querySelector('#username-signup').value.trim();
     const email = document.querySelector('#email-signup').value.trim();
-    const instagram = document.querySelector('#instagram-signup').value.trim();
-    const facebook = document.querySelector('#facebook-signup').value.trim();
+    // const instagram = document.querySelector('#instagram-signup').value.trim();
+    // const facebook = document.querySelector('#facebook-signup').value.trim();
     const password = document.querySelector('#password-signup').value.trim();
 
     if (username && email && password) {
@@ -37,8 +37,8 @@ async function signUpFormHandler(event) {
             body: JSON.stringify({
                 username,
                 email,
-                instagram,
-                facebook,
+                // instagram,
+                // facebook,
                 password
             }),
             headers: {'Content-Type': 'application/json'}

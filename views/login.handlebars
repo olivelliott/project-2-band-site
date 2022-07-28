@@ -1,64 +1,37 @@
-<section class=" bg-primary bg-lighten-md">
-  <div class="container py-4 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card bg-dark  text-white" style="border-radius: 1rem;">
-          <div class="card-body p-5 text-center">
+    <section class=" bg-primary bg-lighten-md login-signup d-flex flex-column justify-content-around align-items-center">
 
+        <div class="container py-4 h-100 row d-flex justify-content-center align-items-center h-100 col-12 col-md-8 col-lg-6 col-xl-5 card bg-dark  text-white card-body p-5 text-center my-3" style="border-radius: 1rem;">
             <form class="mb-md-5 mt-md-4 pb-5 login-form">
-             <h2 class="fw-bold mb-2 text-uppercase">Login</h2>
-              <p class="text-white-50 mb-5">Please enter your login and password!</p>
-
-              <div class="form-outline form-white mb-4">
-                <input type="email" id="email-login" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX">Email</label>
-              </div>
-
-              <div class="form-outline form-white mb-4">
-                <input type="password" id="password-login" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX">Password</label>
-              </div>
-
-            <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
-        </form>
-             </div>
-             </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="bg-primary bg-lighten-md">
-  <div class="container py-4 h-100">
-    <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-        <div class="card bg-dark text-white" style="border-radius: 1rem;">
-          <div class="card-body p-5 text-center">
-        
-        <form class="signup-form">
-            <div class="mb-md-5 mt-md-4 pb-5">
-            <h2 class="fw-bold mb-2 text-uppercase">SIGNUP</h2>
-              
-
-               <div class="form-outline form-white mb-4">
-                <input type="email" id="email-signup" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX">EMAIL</label>
-              </div>
-
-             <div class="form-outline form-white mb-4">
-                <input type="username" id="username-signup" class="form-control form-control-lg" />
-                <label class="form-label" for="typeUsernameX">USERNAME</label>
-              </div>  
-
-               <div class="form-outline form-white mb-4">
-                <input type="password" id="password-signup" class="form-control form-control-lg" />
-                <label class="form-label" for="typePasswordX">PASSWORD</label>
+                <h2 class="fw-bold mb-2 text-uppercase">Login:</h2>
+                <p class="text-white-50 mb-5">Enter your email and password.</p>
+                <div class="form-outline form-white mb-4">
+                    <input placeholder="Email" type="email" id="email-login" class="form-control form-control-lg">
                 </div>
-                <button class="btn btn-outline-light btn-lg px-5" type="submit">CREATE</button>
+                <div class="form-outline form-white mb-4">
+                    <input placeholder="Password" type="password" id="password-login" class="form-control form-control-lg">
+                </div>
+                <button class="btn btn-outline-light btn-lg px-5" type="submit">Login</button>
+            </form>
+        </div>  
 
-              </div>
-              </form>
-            </div>
+        <div class="container py-4 h-100 row d-flex justify-content-center align-items-center h-100 col-12 col-md-8 col-lg-6 col-xl-5 card bg-dark  text-white card-body p-5 text-center my-3" style="border-radius: 1rem;">
+            <form class="mb-md-5 mt-md-4 pb-5 signup-form">
+                <h2 class="fw-bold mb-2 text-uppercase">Sign-Up:</h2>
+                <p class="text-white-50 mb-5">Enter your account info to begin.</p>
+                <div class="form-outline form-white mb-4">
+                    <input placeholder="Email" type="email" id="email-signup" class="form-control form-control-lg">
+                </div>
+                <div class="form-outline form-white mb-4">
+                    <input placeholder="Username" type="username" id="username-signup" class="form-control form-control-lg">
+                </div>
+                <div class="form-outline form-white mb-4">
+                    <input placeholder="Password" type="password" id="password-signup" class="form-control form-control-lg">
+                </div>
+                <button class="btn btn-outline-light btn-lg px-5" type="submit">Sign-Up</button>
+            </form>
+        </div>  
+  
+
+    </section>
 
 <script src="/javascript/login.js"></script> 
