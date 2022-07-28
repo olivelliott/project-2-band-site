@@ -21,6 +21,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: none;
+}
+
 .wrapper {
     justify-content: center;
 }
@@ -165,6 +169,19 @@ a {
 
 #show-details {
     margin-top: 1vh;
+}
+
+.forum-post-style {
+    color: var(--background);
+}
+
+#forum-post:hover {
+    box-shadow: #defe47 0px 0px 10px;
+}
+
+#post-user {
+    border-bottom: 1px solid white;
+
 }
 
 @media only screen and (max-width: 780px) {
