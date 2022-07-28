@@ -47,6 +47,10 @@ html {
     margin-top: 15%;
 }
 
+.card-body {
+    display: flex;
+}
+
 .card-content {
     margin-top: auto;
     background-color: var(--card);
