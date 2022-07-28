@@ -31,7 +31,6 @@ router.get("/", (req, res) => {
 });
 
 // GET a single post
-
 router.get("/:id", (req, res) => {
     Post.findOne({
             where: {
@@ -67,7 +66,7 @@ router.get("/:id", (req, res) => {
 
 // CREATE a new post
 // ! add withAuth once pathways are cleared
-router.post("/", (req, res) => {
+router.post("/", withAuth, (req, res) => {
     Post.create({
             title: req.body.title,
             user_id: req.session.user_id,
