@@ -1,206 +1,35 @@
 const { Comment } = require("../models");
 
-const commentData = [
-  {
-    comment_text: "I wish i could have seen that.",
-    user_id: 1,
-    post_id: 1,
-  },
-  {
-    comment_text: "Preach!",
-    user_id: 2,
-    post_id: 20,
-  },
-  {
-    comment_text: "I know thats right.",
-    user_id: 3,
-    post_id: 19,
-  },
-  {
-    comment_text: "One more time for the poeple in the back.",
-    user_id: 4,
-    post_id: 18,
-  },
-  {
-    comment_text: "im so jealous.",
-    user_id: 5,
-    post_id: 17,
-  },
-  {
-    comment_text: "I wish i could have seen that.",
-    user_id: 6,
-    post_id: 16,
-  },
-  {
-    comment_text: "Preach!",
-    user_id: 7,
-    post_id: 15,
-  },
-  {
-    comment_text: "I know thats right.",
-    user_id: 8,
-    post_id: 14,
-  },
-  {
-    comment_text: "One more time for the poeple in the back.",
-    user_id: 9,
-    post_id: 13,
-  },
-  {
-    comment_text: "im so jealous.",
-    user_id: 10,
-    post_id: 12,
-  },
-  {
-    comment_text: "I wish i could have seen that.",
-    user_id: 11,
-    post_id: 11,
-  },
-  {
-    comment_text: "Preach!",
-    user_id: 12,
-    post_id: 10,
-  },
-  {
-    comment_text: "I know thats right.",
-    user_id: 13,
-    post_id: 9,
-  },
-  {
-    comment_text: "One more time for the poeple in the back.",
-    user_id: 14,
-    post_id: 8,
-  },
-  {
-    comment_text: "im so jealous.",
-    user_id: 15,
-    post_id: 7,
-  },
-  {
-    comment_text: "I wish i could have seen that.",
-    user_id: 1,
-    post_id: 6,
-  },
-  {
-    comment_text: "Preach!",
-    user_id: 2,
-    post_id: 5,
-  },
-  {
-    comment_text: "I know thats right.",
-    user_id: 3,
-    post_id: 4,
-  },
-  {
-    comment_text: "One more time for the poeple in the back.",
-    user_id: 4,
-    post_id: 3,
-  },
-  {
-    comment_text: "im so jealous.",
-    user_id: 5,
-    post_id: 2,
-  },
-  {
-    comment_text: "I wish i could have seen that.",
-    user_id: 6,
-    post_id: 1,
-  },
-  {
-    comment_text: "Preach!",
-    user_id: 7,
-    post_id: 20,
-  },
-  {
-    comment_text: "I know thats right.",
-    user_id: 8,
-    post_id: 19,
-  },
-  {
-    comment_text: "One more time for the poeple in the back.",
-    user_id: 9,
-    post_id: 18,
-  },
-  {
-    comment_text: "im so jealous.",
-    user_id: 10,
-    post_id: 17,
-  },
-  {
-    comment_text: "I wish i could have seen that.",
-    user_id: 11,
-    post_id: 16,
-  },
-  {
-    comment_text: "Preach!",
-    user_id: 12,
-    post_id: 15,
-  },
-  {
-    comment_text: "I know thats right.",
-    user_id: 13,
-    post_id: 14,
-  },
-  {
-    comment_text: "One more time for the poeple in the back.",
-    user_id: 14,
-    post_id: 13,
-  },
-  {
-    comment_text: "im so jealous.",
-    user_id: 15,
-    post_id: 12,
-  },
-  {
-    comment_text: "I wish i could have seen that.",
-    user_id: 1,
-    post_id: 11,
-  },
-  {
-    comment_text: "Preach!",
-    user_id: 2,
-    post_id: 10,
-  },
-  {
-    comment_text: "I know thats right.",
-    user_id: 3,
-    post_id: 9,
-  },
-  {
-    comment_text: "One more time for the poeple in the back.",
-    user_id: 4,
-    post_id: 8,
-  },
-  {
-    comment_text: "im so jealous.",
-    user_id: 5,
-    post_id: 7,
-  },
-  {
-    comment_text: "I wish i could have seen that.",
-    user_id: 6,
-    post_id: 6,
-  },
-  {
-    comment_text: "Preach!",
-    user_id: 7,
-    post_id: 5,
-  },
-  {
-    comment_text: "I know thats right.",
-    user_id: 8,
-    post_id: 4,
-  },
-  {
-    comment_text: "One more time for the poeple in the back.",
-    user_id: 9,
-    post_id: 3,
-  },
-  {
-    comment_text: "im so jealous.",
-    user_id: 10,
-    post_id: 2,
-  },
+const commentData = [{
+        comment_text: "Hey man, I'd love to meet up. I'll DM you. We could meet up at Park Bar if you want. I live in Inman Park if that's convenient for you.",
+        user_id: 3,
+        post_id: 3,
+    },
+    {
+        comment_text: "This probably doesn't help you, but I do have one extra ticket. You can have it for free if it works out...just don't want it to go to waste. Hopefully someone else also has one!",
+        user_id: 1,
+        post_id: 1,
+    },
+    {
+        comment_text: "Sounds awesome, would love to meet up as well.",
+        user_id: 3,
+        post_id: 3,
+    },
+    {
+        comment_text: "I am! Just coming for the day, but I'll DM you.",
+        user_id: 2,
+        post_id: 2,
+    },
+    {
+        comment_text: "Hey thanks for your support. New album is set for early 2023. Not sure about the vinyl yet...having supply chain issues. Peace. - VN",
+        user_id: 4,
+        post_id: 4,
+    },
+    {
+        comment_text: "Whoaa rare Vim sighting",
+        user_id: 4,
+        post_id: 4,
+    },
 ];
 
 const seedComments = () => Comment.bulkCreate(commentData);
