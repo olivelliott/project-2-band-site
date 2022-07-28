@@ -82,7 +82,7 @@ router.post('/login', (req, res) => {
             res.status(404).json({message: 'User not found'});
             return;
         }
-        
+
         const validPassword = dbUserData.checkPassword(req.body.password);
 
         if (!validPassword) {
@@ -152,7 +152,5 @@ router.delete('/:id', (req, res) => {
     })
 })
 
-
-//! TODO: LOGOUT route
 
 module.exports = router;

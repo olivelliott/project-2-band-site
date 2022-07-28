@@ -9,7 +9,7 @@ const withAuth = require("../utils/auth");
 // RENDER it to the 'forum-home' handlebars page
 
 //! add withAuth once pathways are cleared
-router.get("/", (req, res) => {
+router.get("/", withAuth, (req, res) => {
     console.log(req.session);
     console.log("======================");
     Post.findAll({
@@ -43,7 +43,7 @@ router.get("/", (req, res) => {
 
 //! add withAuth after the path below once pathways are cleared
 
-router.get("/posts/:id", (req, res) => {
+router.get("/posts/:id", withAuth, (req, res) => {
     Post.findByPk(req.params.id, {
             attributes: ["id", "title", "user_id", "content"],
             include: [{
