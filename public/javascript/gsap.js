@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger)
+gsap.registerPlugin(ScrollTrigger);
 
 gsap.from("#logo", {
   scrollTrigger: {
@@ -11,30 +11,27 @@ gsap.from("#logo", {
   ease: "back",
 });
 
-
 gsap.from(".about-section", {
-    scrollTrigger: {
-        trigger: ".about-section",
-        toggleActions: "play pause resume pause",
-    },
-    duration: 3,
-    opacity: 0,
-    scale: 0.3,
-    ease: "back",
+  scrollTrigger: {
+    trigger: ".about-section",
+    toggleActions: "play pause resume pause",
+  },
+  duration: 3,
+  opacity: 0,
+  scale: 0.3,
+  ease: "back",
 });
 
-gsap.from('.newsletter-section', {
-    scrollTrigger: {
-        trigger: '.newsletter-section',
-        toggleActions: 'play pause resume pause'
-    },
-    duration: 3,
-    opacity: 0,
-    scale: 0.3,
-    ease: 'back'
+gsap.from(".newsletter-section", {
+  scrollTrigger: {
+    trigger: ".newsletter-section",
+    toggleActions: "play pause resume pause",
+  },
+  duration: 3,
+  opacity: 0,
+  scale: 0.3,
+  ease: "back",
 });
-
-
 
 let images = gsap.utils.toArray(".img");
 // always set the transforms directly via GSAP to ensure accuracy and speed
@@ -53,7 +50,7 @@ images.forEach((image, i) => {
       scale: 1,
       x: 0,
       duration: 0.3,
-    //   overwrite: true,
+      //   overwrite: true,
     });
     // if there's anything to the left, animate it to the proper state in that direction
     if (siblingsLeft.length) {

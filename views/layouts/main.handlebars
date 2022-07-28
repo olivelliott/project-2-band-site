@@ -1,48 +1,64 @@
-<!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Insomnia</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"/>
-        <link rel="stylesheet" href="/stylesheets/style.css" />
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Insomnia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+  </head>
 
-    <body>
-        <div class="wrapper">
-            <header>
-                <div class="nav center">
-                    <nav>
-                        <a href="/" class="btn text-decoration-none">HOME</a>
-                        <a href="/shows" class="btn text-decoration-none">SHOWS</a>
-                        <a href="/forum" class="btn text-decoration-none">FORUM</a>
-                        {{#if loggedIn}}
-                            <button id="logout" class="btn">LOGOUT</button>
-                        {{else}}
-                            <a href="/login" class="btn text-decoration-none">LOGIN</a>
-                        {{/if}}
-                    </nav>
-                </div>
-            </header>
-
-            <main>
-                {{{body}}}
-            </main>
-
-            <footer>
-            </footer>
+  <body>
+    <div class="wrapper">
+      <header>
+        <div class="nav center">
+          <nav>
+            <a href="/" class="btn text-decoration-none">HOME</a>
+            <a href="/shows" class="btn text-decoration-none">SHOWS</a>
+            <a href="/forum" class="btn text-decoration-none">FORUM</a>
+            {{#if loggedIn}}
+              <button id="logout" class="btn">LOGOUT</button>
+            {{else}}
+              <a href="/login" class="btn text-decoration-none">LOGIN</a>
+            {{/if}}
+          </nav>
         </div>
+      </header>
 
-        {{#if loggedIn}}
-            <script src="/javascript/logout.js"></script>
-        {{/if}}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
-    </body>
+      <main>
+        {{{body}}}
+      </main>
+
+      <footer>
+      </footer>
+    </div>
+
+    {{#if loggedIn}}
+      <script src="/javascript/logout.js"></script>
+    {{/if}}
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"
+    ></script>
+  </body>
 
 </html>
