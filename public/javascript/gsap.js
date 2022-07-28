@@ -1,8 +1,8 @@
 gsap.registerPlugin(ScrollTrigger)
 
-gsap.from("#band-name", {
+gsap.from("#logo", {
   scrollTrigger: {
-    trigger: "#band-name",
+    trigger: "#logo",
     toggleActions: "play pause resume pause",
   },
   duration: 3,
