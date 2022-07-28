@@ -33,7 +33,7 @@
             <h5 class="forum-post-style">
               {{post.title}}
             </h5>
-            <p class="text-sm forum-post-style" id="post-user">Posted by {{user.username}}</p>
+            <p class="text-sm forum-post-style" id="post-user">Posted by {{user.username}} on {{format_date post.created_at}}</p>
 
             <div class="meta card-content">
               <p class="card-text">{{post.content}}</p>
