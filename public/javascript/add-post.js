@@ -5,9 +5,8 @@ async function newFormHandler(event) {
 
     // title & content querySelector from forum-home element
 
-    const title = document.querySelector('input[name="title"]').value;
-    const content = document.querySelector('input[name="content"]').value;
-
+    const title = document.querySelector('input[name="forum-title"]').value.trim();
+    const content = document.querySelector("#forum-content").value.trim();
     // response: fetch('/api/posts)
     // method: POST
 
