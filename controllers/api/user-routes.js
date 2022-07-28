@@ -62,6 +62,7 @@ router.post('/', (req, res) => {
             req.session.loggedIn = true;
 
             res.json(dbUserData);
+            console.log('created a user')
         });
     })
     .catch(err => {
