@@ -51,6 +51,10 @@ a {
     margin-top: 2vh;
 }
 
+.card-body {
+    display: flex;
+}
+
 .card-content {
     margin-top: auto;
     background-color: var(--card);
