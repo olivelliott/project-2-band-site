@@ -27,7 +27,7 @@ async function newFormHandler(event) {
     // if response.ok reload the page
 
     if (response.ok) {
-        document.location.replace("/forum");
+        document.location.reload();
     } else {
         alert(response.statusText);
     }

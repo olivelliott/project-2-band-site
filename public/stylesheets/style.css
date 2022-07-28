@@ -17,6 +17,10 @@ html {
     font-size: 18px;
 }
 
+a {
+    text-decoration: none;
+}
+
 .wrapper {
     justify-content: center;
 }

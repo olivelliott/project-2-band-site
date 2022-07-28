@@ -45,7 +45,7 @@ async function signUpFormHandler(event) {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/forum');
         } else {
             alert(response.statusText);
         }
