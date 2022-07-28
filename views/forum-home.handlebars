@@ -22,22 +22,21 @@
     <button type="submit" class="btn btn-light">Post</button>
   </form>
 
-  <h2 class="mb-5 pt-5 text-white">Recent Posts</h2>
+  <h2 class="mb-3 pt-5 text-white">Recent Posts</h2>
+  <p>Click post title to reply</p>
 
   {{#each posts as |post|}}
 
     <div
-      class="card row-hover pos-relative py-3 px-3 mb-3 border-warning border-top-0 border-right-0 border-bottom-0 rounded-0"
+      class="card row-hover pos-relative py-3 px-3 mb-3 border-warning border-top-0 border-right-0 border-bottom-0 rounded-3"
     >
       <div class="row align-items-center">
         <div class="col-md-8 mb-3 mb-sm-0">
           <h5>
             <a href="/posts/{{post.id}}" class="text-primary">{{post.title}}</a>
           </h5>
-          <p class="text-sm"><span class="op-6">Posted</span>
-            <a class="text-black" href="#">20 minutes</a>
-            <span class="op-6">ago by</span>
-            <a class="text-black" href="#">Username</a></p>
+          <p class="text-sm"><span class="op-6">Posted by</span>
+            <a class="text-black" href="#">{{user.username}}</a></p>
 
           <div class="meta card-content">
             <p class="card-text">{{post.content}}</p>

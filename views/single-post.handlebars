@@ -1,29 +1,33 @@
-<div class="card">
-  <div class="card-header  flex-row justify-space-between">
+
+  <div class="flex-row justify-space-between pb-2 mt-5">
     <h2>
       <a href="/posts/{{post.id}}">
         <div class="col-8">{{post.forum-title}}</div>
       </a>
     </h2>
-    <div class="col-3">posted by {{user.username}} on {{format_date post.dateCreated}}
+    <div class="col-3 mx-4">Posted by {{user.username}} on {{format_date post.dateCreated}}
     </div>
   </div>  
-  <p class="card-body">
+  <p class="card mx-5 px-3 py-2 forum-text">
    {{post.content}}
   </p>
-</div>
+
 <input type="hidden" name="post-id" value="{{post.id}}"/>
 {{!-- {{#if loggedIn}} --}}
-<div class="card">
-  <div class="card-header"></div>
-  <form class="card-body" id="new-comment-form">
+
+<div class="bg-light">
+{{comment.comment_text}}
+</div>
+
+  <form class="card-body mx-4" id="new-comment-form">
     
     <p class="form-label">Comment:</p>
-    <textarea class="form-input" id="comment-body" name="comment-body"></textarea>
+    <textarea class="form-input form-control card" id="comment-body" name="comment-body"></textarea>
+    <br>
     <button type="submit" class="btn btn-primary">Submit:</button>
   </form>
 {{> comments post.comments}}
-</div>
+
 {{!-- {{/if}} --}}
 <script src="/js/comment.js"></script>
 
