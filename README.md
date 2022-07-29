@@ -38,6 +38,7 @@ When you arrive at the [homepage](https://band-site-22.herokuapp.com/), you can:
 ## Launch :rocket:
 
 [Click to visit our deployed website on Heroku](https://band-site-22.herokuapp.com/)
+[Link to our project presentation on Google Drive](https://docs.google.com/presentation/d/1sz1r8w69iuxA5GcQ9Kud4IQO5vSZ1rkEvmK0uFJQBdY/edit?usp=sharing)
 
 ## Technology
 
