@@ -1,12 +1,12 @@
-const router = require("express").Router();
-const { User, Post, Comment, Show } = require("../../models");
+const router = require('express').Router();
+const { User, Post, Comment, Show } = require('../../models');
 
 // * api/shows
 
 // GET all shows
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
   Show.findAll({
-    attributes: ["id", "venue", "show_date", "location", "show_link"],
+    attributes: ['id', 'venue', 'show_date', 'location', 'show_link'],
   })
     .then((dbShowData) => res.json(dbShowData))
     .catch((err) => {
@@ -16,16 +16,16 @@ router.get("/", (req, res) => {
 });
 
 // GET one show by its id
-router.get("/:id", (req, res) => {
+router.get('/:id', (req, res) => {
   Show.findOne({
     where: {
       id: req.params.id,
     },
-    attributes: ["id", "venue", "show_date", "location", "show_link"],
+    attributes: ['id', 'venue', 'show_date', 'location', 'show_link'],
   })
     .then((dbShowData) => {
       if (!dbShowData) {
-        res.status(404).json({ message: "No show found" });
+        res.status(404).json({ message: 'No show found' });
         return;
       }
       res.json(dbShowData);
@@ -37,7 +37,7 @@ router.get("/:id", (req, res) => {
 });
 
 // CREATE a show
-router.post("/", (req, res) => {
+router.post('/', (req, res) => {
   // show_date expects: '2022-01-17'
   Show.create({
     venue: req.body.venue,
@@ -53,7 +53,7 @@ router.post("/", (req, res) => {
 });
 
 // UPDATE a show by its id
-router.put("/:id", (req, res) => {
+router.put('/:id', (req, res) => {
   Show.update(req.body, {
     individualHooks: true,
     where: {
@@ -62,7 +62,7 @@ router.put("/:id", (req, res) => {
   })
     .then((dbShowData) => {
       if (!dbShowData) {
-        res.status(404).json({ message: "No show found with this id" });
+        res.status(404).json({ message: 'No show found with this id' });
         return;
       }
       res.json(dbShowData);
@@ -74,7 +74,7 @@ router.put("/:id", (req, res) => {
 });
 
 // DELETE a show by its id
-router.delete("/:id", (req, res) => {
+router.delete('/:id', (req, res) => {
   Show.destroy({
     where: {
       id: req.params.id,
@@ -82,7 +82,7 @@ router.delete("/:id", (req, res) => {
   })
     .then((dbShowData) => {
       if (!dbShowData) {
-        res.status(404).json({ message: "No show found with this id" });
+        res.status(404).json({ message: 'No show found with this id' });
         return;
       }
       res.json(dbShowData);

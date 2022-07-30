@@ -1,56 +1,48 @@
-{{! TOP SECTION }}
-<section class="mt-5 px-5 overflow-auto">
+<section class='mt-5 px-5 overflow-auto'>
   <h2>Get Connected!</h2>
   <p>Want to meet up with other people going to the same shows? Need
     recommendations for places to stay? Ask here!</p>
 
-  <form class="mb-5 new-post-form">
-    <div class="mb-3">
-      <label for="forum-title" class="form-label fw-bold">New post title</label>
+  <form class='mb-5 new-post-form'>
+    <div class='mb-3'>
+      <label for='forum-title' class='form-label fw-bold'>New post title</label>
       <input
-        type="text"
-        id="forum-title"
-        name="forum-title"
-        class="form-control"
+        type='text'
+        id='forum-title'
+        name='forum-title'
+        class='form-control'
       />
     </div>
-    <div class="mb-3">
-      <label for="forum-content" class="form-label fw-bold">New post text
+    <div class='mb-3'>
+      <label for='forum-content' class='form-label fw-bold'>New post text
         (optional)</label>
-      <textarea id="forum-content" class="textarea form-control"></textarea>
+      <textarea id='forum-content' class='textarea form-control'></textarea>
     </div>
-    <button type="submit" class="btn btn-light">Post</button>
+    <button type='submit' class='btn btn-light'>Post</button>
   </form>
 
-  <h2 class="mb-3 pt-5 text-white">Recent Posts</h2>
+  <h2 class='mb-3 pt-5 text-white'>Recent Posts</h2>
   <p>Click post title to reply</p>
 
   {{#each posts as |post|}}
-    <a href="/forum/posts/{{post.id}}" class="text-primary" id="forum-link">
-      <div class="card row text-center row-hover pos-relative py-3 px-3 mb-3 border-warning border-top-0 border-right-0 border-bottom-0 rounded-3 align-items-center" id="forum-post">
-        {{!-- <div class="row align-items-center"> --}}
-          <div class="col-md-8 mb-3 mb-sm-0">
-            <h5 class="forum-post-style">
+    <a href='/forum/posts/{{post.id}}' class='text-primary' id='forum-link'>
+      <div class='card row text-center row-hover pos-relative py-3 px-3 mb-3 border-warning border-top-0 border-right-0 border-bottom-0 rounded-3 align-items-center' id='forum-post'>
+          <div class='col-md-8 mb-3 mb-sm-0'>
+            <h5 class='forum-post-style'>
               {{post.title}}
             </h5>
-            <p class="text-sm forum-post-style" id="post-user">Posted by {{user.username}} on {{format_date post.created_at}}</p>
+            <p class='text-sm forum-post-style' id='post-user'>Posted by {{user.username}} on {{format_date post.created_at}}</p>
 
-            <div class="meta card-content">
-              <p class="card-text">{{post.content}}</p>
+            <div class='meta card-content'>
+              <p class='card-text'>{{post.content}}</p>
             </div>
           </div>
         </div>
-        {{! </div> }}
       </div>
     </a>
-
   {{/each}}
-
 </section>
 
-{{! TOP SECTION END }}
 
-{{! POSTS/FORUM }}
-
-<script src="/javascript/add-post.js"></script>
-<script src="/javascript/forum.js"></script>
+<script src='/javascript/add-post.js'></script>
+<script src='/javascript/forum.js'></script>

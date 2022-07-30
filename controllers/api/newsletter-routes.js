@@ -1,17 +1,17 @@
-const router = require("express").Router();
-const sequelize = require("../../config/connection");
-const { Newsletter } = require("../../models");
+const router = require('express').Router();
+const sequelize = require('../../config/connection');
+const { Newsletter } = require('../../models');
 
 // * api/newsletter
 
-// GET all emails for the newsletter
-router.get("/", (req, res) => {
+// GET all emails
+router.get('/', (req, res) => {
   Newsletter.findAll({
-    attributes: ["id", "email"],
+    attributes: ['id', 'email'],
   })
     .then((dbNewsletterData) => {
       if (!dbNewsletterData) {
-        res.status(404).json({ message: "No emails found!" });
+        res.status(404).json({ message: 'No emails found!' });
       }
       res.json(dbNewsletterData);
     })
@@ -21,17 +21,17 @@ router.get("/", (req, res) => {
     });
 });
 
-// GET one email for the newsletter
-router.get("/:id", (req, res) => {
+// GET one email
+router.get('/:id', (req, res) => {
   Newsletter.findOne({
     where: {
       id: req.body.id,
     },
-    attributes: ["id", "email"],
+    attributes: ['id', 'email'],
   })
     .then((dbNewsletterData) => {
       if (!dbNewsletterData) {
-        res.status(404).json({ message: "No email found with this id" });
+        res.status(404).json({ message: 'No email found with this id' });
         return;
       }
       res.json(dbNewsletterData);
@@ -42,8 +42,8 @@ router.get("/:id", (req, res) => {
     });
 });
 
-// ADD a new email to the newsletter database
-router.post("/", (req, res) => {
+// ADD a new email
+router.post('/', (req, res) => {
   Newsletter.create({
     email: req.body.email,
   })
@@ -55,7 +55,7 @@ router.post("/", (req, res) => {
 });
 
 // UPDATE an existing email
-router.put("/:id", (req, res) => {
+router.put('/:id', (req, res) => {
   Newsletter.update(req.body, {
     where: {
       id: req.params.id,
@@ -63,7 +63,7 @@ router.put("/:id", (req, res) => {
   })
     .then((dbNewsletterData) => {
       if (!dbNewsletterData) {
-        res.status(404).json({ message: "No email found with this id" });
+        res.status(404).json({ message: 'No email found with this id' });
         return;
       }
       res.json(dbNewsletterData);
@@ -75,7 +75,7 @@ router.put("/:id", (req, res) => {
 });
 
 // DELETE an existing email
-router.delete("/:id", (req, res) => {
+router.delete('/:id', (req, res) => {
   Newsletter.destroy({
     where: {
       id: req.params.id,
@@ -83,7 +83,7 @@ router.delete("/:id", (req, res) => {
   })
     .then((dbNewsletterData) => {
       if (!dbNewsletterData) {
-        res.status(404).json({ message: "No email found with this id" });
+        res.status(404).json({ message: 'No email found with this id' });
         return;
       }
       res.json(dbNewsletterData);

@@ -3,12 +3,7 @@ const sequelize = require('../config/connection');
 const { Post, User, Comment, Show } = require('../models');
 const withAuth = require('../utils/auth');
 
-// ! withAuth
-
-// * GET ALL FORUM POSTS : include : comment, user
-// RENDER it to the 'forum-home' handlebars page
-
-//! add withAuth once pathways are cleared
+// GET all posts and render to single-post.handlebars
 router.get('/', withAuth, (req, res) => {
   console.log(req.session);
   console.log('======================');
@@ -39,11 +34,7 @@ router.get('/', withAuth, (req, res) => {
     });
 });
 
-// * GET SINGLE FORUM POST : include : comment, user
-// RENDER it to the 'single-post' handlebars page
-
-//! add withAuth after the path below once pathways are cleared
-
+// GET a single post and render to single-post.handlebars
 router.get('/posts/:id', withAuth, (req, res) => {
   Post.findByPk(req.params.id, {
     attributes: ['id', 'title', 'user_id', 'content', 'created_at'],
@@ -80,5 +71,3 @@ router.get('/posts/:id', withAuth, (req, res) => {
 });
 
 module.exports = router;
-
-//testing

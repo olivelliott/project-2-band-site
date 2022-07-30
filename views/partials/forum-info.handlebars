@@ -1,14 +1,11 @@
-TODO:
-{{! Username, date created, facebook / instagram logo }}
+<div class='card mb-5'>
 
-<div class="card mb-5">
-
-  <header class="card-header bg-secondary">
-    <h4 class="card-title"><a
-        href="/post/{{id}}"
-        target="_blank"
+  <header class='card-header bg-secondary'>
+    <h4 class='card-title'><a
+        href='/post/{{id}}'
+        target='_blank'
       >{{title}}</a></h4>
-    <h6 class="mb-2 text-light">Posted by
+    <h6 class='mb-2 text-light'>Posted by
       {{user.username}}
       on
       {{created_at}}</h6>
@@ -16,5 +13,5 @@ TODO:
 
 </div>
 
-<a href="/posts/{{id}}">{{comments.length}}
-  {{format_plural "comment" comments.length}}</a>
+<a href='/posts/{{id}}'>{{comments.length}}
+  {{format_plural 'comment' comments.length}}</a>
