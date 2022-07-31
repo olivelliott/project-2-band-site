@@ -1,21 +1,20 @@
-// async function
 async function newsletterSignupHandler(event) {
   event.preventDefault();
 
-  const email = document.querySelector("#newsletter-email").value.trim();
+  const email = document.querySelector('#newsletter-email').value.trim();
 
   console.log(email);
   if (email) {
-    const response = await fetch("/api/newsletter", {
-      method: "POST",
+    const response = await fetch('/api/newsletter', {
+      method: 'POST',
       body: JSON.stringify({
         email,
       }),
-      headers: { "Content-Type": "application/json" },
+      headers: { 'Content-Type': 'application/json' },
     });
 
     if (response.ok) {
-      alert("Email Added!");
+      alert('Email Added!');
       document.location.reload();
     } else {
       alert(response.statusText);
@@ -24,5 +23,5 @@ async function newsletterSignupHandler(event) {
 }
 
 document
-  .querySelector(".newsletter-signup")
-  .addEventListener("submit", newsletterSignupHandler);
+  .querySelector('.newsletter-signup')
+  .addEventListener('submit', newsletterSignupHandler);

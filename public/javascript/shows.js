@@ -1,13 +1,6 @@
-async function showHandler(req, res) {
-  const showLink = document.getElementById("show-link");
-  console.log(showLink);
-
+async function showHandler() {
+  const showLink = document.getElementById('show-link');
   window.open(showLink);
 }
 
-// function showTest(showLink) {
-//     console.log(showLink)
-//     window.location.replace( showLink);
-// }
-
-document.querySelector("#show-link").addEventListener("click", showHandler);
+document.querySelector('#show-link').addEventListener('click', showHandler);

@@ -1,17 +1,16 @@
 :root {
-    --background: #2a2356;
-    --card: #e0d9f6;
-    --card-header: #586ae2;
-    --text: #6ecbf5;
-    --forum-text: black;
-    /* --card-hover: rgba(0, 0, 0, 0.24) 0px 3px 8px; */
-    --card-hover: #c252e1 0px 0px 10px;
-    --pink: #c252e1;
+  --background: #2a2356;
+  --card: #e0d9f6;
+  --card-header: #586ae2;
+  --text: #6ecbf5;
+  --forum-text: black;
+  --card-hover: #c252e1 0px 0px 10px;
+  --pink: #c252e1;
 }
 
 body,
 html {
-  font-family: "Kanit", sans-serif;
+  font-family: 'Kanit', sans-serif;
   margin: 0px;
   background-color: var(--background);
   color: var(--text);
@@ -95,7 +94,6 @@ a:hover {
 
 .img {
   width: 25rem;
-  /* height: 25rem; */
   top: 35%;
   transform: perspective(1000px) rotateY(-25deg);
 }
@@ -176,22 +174,22 @@ a:hover {
 }
 
 #single-post {
-    color: var(--background);
+  color: var(--background);
 }
 
 #single-post-content {
-    margin-left: 5vw;
-    margin-right: 5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 
 #single-post-header {
-    background-color: var(--pink);
-    color: white;
-    height: 15vh;
+  background-color: var(--pink);
+  color: white;
+  height: 15vh;
 }
 
 #forum-post {
-    height: 26vh;
+  height: 26vh;
 }
 
 #forum-post:hover {
@@ -199,19 +197,19 @@ a:hover {
 }
 
 #post-user {
-    border-bottom: 1px solid white;
+  border-bottom: 1px solid white;
 }
 
 #comment-submit {
-    background-color: var(--pink);
+  background-color: var(--pink);
 }
 
 .comment {
-    height: 15vh;
+  height: 15vh;
 }
 
 @media only screen and (max-width: 780px) {
   #images-home {
     display: none;
   }
-} ;
+};

@@ -1,12 +1,12 @@
-const router = require("express").Router();
-const { User, Post, Comment, Show } = require("../../models");
+const router = require('express').Router();
+const { User, Post, Comment, Show } = require('../../models');
 
 // * api/users
 
 // GET all users
-router.get("/", (req, res) => {
+router.get('/', (req, res) => {
   User.findAll({
-    attributes: { exclude: ["password"] },
+    attributes: { exclude: ['password'] },
   })
     .then((dbUserData) => res.json(dbUserData))
     .catch((err) => {
@@ -16,26 +16,26 @@ router.get("/", (req, res) => {
 });
 
 // GET one user by id
-router.get("/:id", (req, res) => {
+router.get('/:id', (req, res) => {
   User.findOne({
-    attributes: { exclude: ["password"] },
+    attributes: { exclude: ['password'] },
     where: {
       id: req.params.id,
     },
     include: [
       {
         model: Post,
-        attributes: ["id", "title", "show_link"],
+        attributes: ['id', 'title', 'show_link'],
       },
       {
         model: Comment,
-        attributes: ["id", "comment_text", "user_id", "post_id"],
+        attributes: ['id', 'comment_text', 'user_id', 'post_id'],
       },
     ],
   })
     .then((dbUserData) => {
       if (!dbUserData) {
-        res.status(404).json({ message: "No users found with this id" });
+        res.status(404).json({ message: 'No users found with this id' });
         return;
       }
       res.json(dbUserData);
@@ -47,7 +47,7 @@ router.get("/:id", (req, res) => {
 });
 
 // CREATE a new user
-router.post("/", (req, res) => {
+router.post('/', (req, res) => {
   User.create({
     username: req.body.username,
     email: req.body.email,
@@ -62,7 +62,7 @@ router.post("/", (req, res) => {
         req.session.loggedIn = true;
 
         res.json(dbUserData);
-        console.log("created a user");
+        console.log('created a user');
       });
     })
     .catch((err) => {
@@ -72,21 +72,21 @@ router.post("/", (req, res) => {
 });
 
 // LOGIN route
-router.post("/login", (req, res) => {
+router.post('/login', (req, res) => {
   User.findOne({
     where: {
       email: req.body.email,
     },
   }).then((dbUserData) => {
     if (!dbUserData) {
-      res.status(404).json({ message: "User not found" });
+      res.status(404).json({ message: 'User not found' });
       return;
     }
 
     const validPassword = dbUserData.checkPassword(req.body.password);
 
     if (!validPassword) {
-      res.status(404).json({ message: "Password is incorrect!" });
+      res.status(404).json({ message: 'Password is incorrect!' });
       return;
     }
 
@@ -95,13 +95,13 @@ router.post("/login", (req, res) => {
       req.session.username = dbUserData.username;
       req.session.loggedIn = true;
 
-      res.json({ user: dbUserData, message: "You are logged in" });
+      res.json({ user: dbUserData, message: 'You are logged in' });
     });
   });
 });
 
 // LOGOUT route
-router.post("/logout", (req, res) => {
+router.post('/logout', (req, res) => {
   if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
@@ -112,7 +112,7 @@ router.post("/logout", (req, res) => {
 });
 
 // UPDATE a user
-router.put("/:id", (req, res) => {
+router.put('/:id', (req, res) => {
   User.update(req.body, {
     individualHooks: true,
     where: {
@@ -121,7 +121,7 @@ router.put("/:id", (req, res) => {
   })
     .then((dbUserData) => {
       if (!dbUserData) {
-        res.status(404).json({ message: "User not found" });
+        res.status(404).json({ message: 'User not found' });
         return;
       }
       res.json(dbUserData);
@@ -133,7 +133,7 @@ router.put("/:id", (req, res) => {
 });
 
 // DELETE a user by its id
-router.delete("/:id", (req, res) => {
+router.delete('/:id', (req, res) => {
   User.destroy({
     where: {
       id: req.params.id,
@@ -141,7 +141,7 @@ router.delete("/:id", (req, res) => {
   })
     .then((dbUserData) => {
       if (!dbUserData) {
-        res.status(404).json({ message: "User not found" });
+        res.status(404).json({ message: 'User not found' });
         return;
       }
       res.json(dbUserData);

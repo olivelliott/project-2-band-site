@@ -3,29 +3,21 @@
 async function newFormHandler(event) {
   event.preventDefault();
 
-  // title & content querySelector from forum-home element
-
   const title = document
     .querySelector('input[name="forum-title"]')
     .value.trim();
-  const content = document.querySelector("#forum-content").value.trim();
-  // response: fetch('/api/posts)
-  // method: POST
-
-  // stringify title & content
+  const content = document.querySelector('#forum-content').value.trim();
 
   const response = await fetch(`/api/posts`, {
-    method: "POST",
+    method: 'POST',
     body: JSON.stringify({
       title,
       content,
     }),
     headers: {
-      "Content-Type": "application/json",
+      'Content-Type': 'application/json',
     },
   });
-
-  // if response.ok reload the page
 
   if (response.ok) {
     document.location.reload();
@@ -34,8 +26,6 @@ async function newFormHandler(event) {
   }
 }
 
-// event listener for the forum-home // new post form // submit button
-
 document
-  .querySelector(".new-post-form")
-  .addEventListener("submit", newFormHandler);
+  .querySelector('.new-post-form')
+  .addEventListener('submit', newFormHandler);

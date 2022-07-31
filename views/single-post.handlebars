@@ -1,66 +1,33 @@
 
-<div class="card justify-space-between pb-2 mt-5 text-center" id="single-post-content">
-  <div class="card-header" id="single-post-header">
+<div class='card justify-space-between pb-2 mt-5 text-center' id='single-post-content'>
+  <div class='card-header' id='single-post-header'>
     <h2>
         {{post.title}}
     </h2>
-    <div class="text-center">Posted by {{post.user.username}} on {{format_date post.created_at}}
+    <div class='text-center'>Posted by {{post.user.username}} on {{format_date post.created_at}}
     </div>
   </div>
-  <div class="card-content">
-    <p class="mx-5 px-3 py-2 forum-text" id="single-post">
+  <div class='card-content'>
+    <p class='mx-5 px-3 py-2 forum-text' id='single-post'>
       {{post.content}}
     </p>
   </div>
 </div>
 
-<input type="hidden" name="post-id" value="{{post.id}}"/>
+<input type='hidden' name='post-id' value='{{post.id}}'/>
 
-<div class="bg-light">
+<div class='bg-light'>
   {{comment.comment_text}}
 </div>
 
-  <form class="card-body mx-4" id="new-comment-form">
+  <form class='card-body mx-4' id='new-comment-form'>
 
-    <p class="form-label px-2">Comment:</p>
+    <p class='form-label px-2'>Comment:</p>
 
-    <textarea class="form-input form-control" id="comment-body"></textarea>
-    <button type="submit" class="btn" id="comment-submit">Submit:</button>
+    <textarea class='form-input form-control' id='comment-body'></textarea>
+    <button type='submit' class='btn' id='comment-submit'>Submit:</button>
   </form>
 {{> comments post.comments}}
 
 
-{{!-- {{/if}} --}}
-<script src="/javascript/comment.js"></script>
-
-
-{{!-- {{> forum-info post}}
-
-<div>{{post.content}}</div>
-
-
-{{#if loggedIn}}
-
-
-<form class="comment-form">
-  <div>
-    <textarea name="card-body comment-body"></textarea>
-  </div>
-
-  <div>
-    <button type="submit">Add comment</button>
-  </div>
-</form>
-
-{{/if}}
-
-{{> comments post.comments}}
-
-
-{{#if loggedIn}}
-<script src="/javascript/comment.js"></script>
-{{/if}}
-
-<h1>hello</h1> --}}
-
-
+<script src='/javascript/comment.js'></script>
